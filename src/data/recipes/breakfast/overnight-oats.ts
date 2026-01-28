@@ -9,6 +9,7 @@ export const overnightOats: Recipe = {
     name: 'Classic Overnight Oats',
     description:
         'A creamy, no-cook breakfast that you prepare the night before. Wake up to a delicious, ready-to-eat meal packed with fiber and nutrients.',
+    image: require('../../../../assets/recipes/overnight-oats.png'),
     mealType: 'breakfast',
     prepTime: 5,
     cookTime: 0, // No cooking - just refrigerate overnight

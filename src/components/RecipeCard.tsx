@@ -2,7 +2,7 @@
 // Displays a compact recipe preview with bookmark button
 
 import React from 'react';
-import { TouchableOpacity, View, Text, StyleSheet } from 'react-native';
+import { TouchableOpacity, View, Text, StyleSheet, Image } from 'react-native';
 import { theme } from '../theme';
 import { Recipe, MealType } from '../types';
 import { useBookmarks } from '../context/BookmarkContext';
@@ -39,10 +39,14 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, onPress }) => {
 
     return (
         <TouchableOpacity style={styles.card} onPress={onPress} activeOpacity={0.85}>
-            {/* Meal Type Badge */}
-            <View style={styles.mealBadge}>
-                <Text style={styles.mealEmoji}>{mealEmojis[recipe.mealType]}</Text>
-            </View>
+            {/* Meal Type Badge or Image */}
+            {recipe.image ? (
+                <Image source={recipe.image} style={styles.thumbnail} />
+            ) : (
+                <View style={styles.mealBadge}>
+                    <Text style={styles.mealEmoji}>{mealEmojis[recipe.mealType]}</Text>
+                </View>
+            )}
 
             {/* Main Content */}
             <View style={styles.content}>
@@ -94,6 +98,13 @@ const styles = StyleSheet.create({
     },
     mealEmoji: {
         fontSize: 24,
+    },
+    thumbnail: {
+        width: 48,
+        height: 48,
+        borderRadius: theme.borderRadius.md,
+        marginRight: theme.spacing.md,
+        backgroundColor: theme.colors.surfaceElevated,
     },
     content: {
         flex: 1,

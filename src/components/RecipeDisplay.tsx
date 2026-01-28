@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, StyleSheet, Image } from 'react-native';
 import { theme } from '../theme';
 import { Recipe } from '../types';
 import { formatAmount } from '../utils/formatAmount';
@@ -28,6 +28,11 @@ export const RecipeDisplay: React.FC<RecipeDisplayProps> = ({ recipe }) => {
 
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+      {/* Recipe Image */}
+      {recipe.image && (
+        <Image source={recipe.image} style={styles.heroImage} resizeMode="cover" />
+      )}
+
       {/* Recipe Header */}
       <View style={styles.header}>
         <Text style={styles.title}>{recipe.name}</Text>
@@ -142,6 +147,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: theme.colors.background,
+  },
+  heroImage: {
+    width: '100%',
+    height: 300,
   },
   header: {
     backgroundColor: theme.colors.surface,

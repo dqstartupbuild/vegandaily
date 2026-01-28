@@ -37,6 +37,7 @@ export interface Recipe {
   id: string;
   name: string;
   description: string;
+  image: any;
   mealType: MealType;
   prepTime: number; // in minutes
   cookTime: number; // in minutes

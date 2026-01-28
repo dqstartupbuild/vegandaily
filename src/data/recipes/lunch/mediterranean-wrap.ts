@@ -9,6 +9,7 @@ export const mediterraneanWrap: Recipe = {
     name: 'Mediterranean Veggie Wrap',
     description:
         'A vibrant, flavor-packed wrap filled with creamy hummus, crisp vegetables, and tangy olives. Perfect for a satisfying and portable lunch.',
+    image: require('../../../../assets/recipes/mediterranean-wrap.png'),
     mealType: 'lunch',
     prepTime: 15,
     cookTime: 0,
