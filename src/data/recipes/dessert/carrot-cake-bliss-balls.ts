@@ -4,7 +4,7 @@ export const carrotCakeBlissBalls: Recipe = {
     id: 'carrot-cake-bliss-balls',
     name: 'Carrot Cake Bliss Balls',
     description: 'A flavorful, plant-based dessert recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/dessert/carrot-cake-bliss-balls.png'),
     mealType: 'dessert',
     prepTime: 12,
     cookTime: 0,

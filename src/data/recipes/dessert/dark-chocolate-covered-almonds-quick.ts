@@ -4,7 +4,7 @@ export const darkChocolateCoveredAlmondsQuick: Recipe = {
     id: 'dark-chocolate-covered-almonds-quick',
     name: 'Dark Chocolate Covered Almonds (Quick)',
     description: 'A flavorful, plant-based dessert recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/dessert/dark-chocolate-covered-almonds-quick.png'),
     mealType: 'dessert',
     prepTime: 8,
     cookTime: 2,

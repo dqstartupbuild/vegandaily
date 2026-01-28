@@ -4,7 +4,7 @@ export const coconutRicePuddingSimple: Recipe = {
     id: 'coconut-rice-pudding-simple',
     name: 'Coconut Rice Pudding (Simple)',
     description: 'A flavorful, plant-based dessert recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/dessert/coconut-rice-pudding-simple.png'),
     mealType: 'dessert',
     prepTime: 5,
     cookTime: 25,

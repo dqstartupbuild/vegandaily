@@ -4,7 +4,7 @@ export const strawberryOatShortcakeBowl: Recipe = {
     id: 'strawberry-oat-shortcake-bowl',
     name: 'Strawberry Oat "Shortcake" Bowl',
     description: 'A balanced bowl layered with vibrant veggies and hearty plant proteins.',
-    image: null,
+    image: require('../../../../assets/recipes/dessert/strawberry-oat-shortcake-bowl.png'),
     mealType: 'dessert',
     prepTime: 10,
     cookTime: 6,

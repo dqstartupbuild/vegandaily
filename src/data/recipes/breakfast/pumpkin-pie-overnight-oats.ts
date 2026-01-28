@@ -4,7 +4,7 @@ export const pumpkinPieOvernightOats: Recipe = {
     id: 'pumpkin-pie-overnight-oats',
     name: 'Pumpkin Pie Overnight Oats',
     description: 'A flavorful, plant-based breakfast recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/breakfast/pumpkin-pie-overnight-oats.png'),
     mealType: 'breakfast',
     prepTime: 6,
     cookTime: 0,

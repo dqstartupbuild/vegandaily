@@ -4,7 +4,7 @@ export const warmMilletPorridgeBerries: Recipe = {
     id: 'warm-millet-porridge-berries',
     name: 'Warm Millet Porridge + Berries',
     description: 'A flavorful, plant-based breakfast recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/breakfast/warm-millet-porridge-berries.png'),
     mealType: 'breakfast',
     prepTime: 5,
     cookTime: 20,

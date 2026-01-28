@@ -4,7 +4,7 @@ export const bananaWalnutBakedOatmealMealPrep: Recipe = {
     id: 'banana-walnut-baked-oatmeal-meal-prep',
     name: 'Banana-Walnut Baked Oatmeal (Meal Prep)',
     description: 'A flavorful, plant-based breakfast recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/breakfast/banana-walnut-baked-oatmeal-meal-prep.png'),
     mealType: 'breakfast',
     prepTime: 10,
     cookTime: 30,
