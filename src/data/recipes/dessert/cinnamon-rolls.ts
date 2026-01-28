@@ -37,4 +37,10 @@ export const cinnamonRolls: Recipe = {
         'Beat frosting ingredients. Spread over warm rolls.',
     ],
     tags: ['dessert', 'cinnamon-rolls', 'baking'],
+    nutritionPerServing: {
+        calories: 320,
+        protein: 5,
+        carbs: 50,
+        fat: 12,
+    },
 };

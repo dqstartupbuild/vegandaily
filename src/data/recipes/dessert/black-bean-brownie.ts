@@ -35,4 +35,10 @@ export const blackBeanBrownies: Recipe = {
         'Cool completely in pan before slicing (crucial for texture).',
     ],
     tags: ['dessert', 'brownies', 'gluten-free', 'healthy'],
+    nutritionPerServing: {
+        calories: 190,
+        protein: 6,
+        carbs: 24,
+        fat: 8,
+    },
 };

@@ -36,4 +36,10 @@ export const chocolateChipBlondies: Recipe = {
         'Cool completely in the pan before slicing.',
     ],
     tags: ['dessert', 'blondies', 'chocolate', 'almond-butter'],
+    nutritionPerServing: {
+        calories: 270,
+        protein: 5,
+        carbs: 30,
+        fat: 14,
+    },
 };

@@ -25,4 +25,10 @@ export const speltTortillas: Recipe = {
         'Cook each tortilla for 1-2 minutes per side.',
     ],
     tags: ['bread', 'spelt', 'tortillas', 'staple'],
+    nutritionPerServing: {
+        calories: 130,
+        protein: 4,
+        carbs: 22,
+        fat: 3,
+    },
 };

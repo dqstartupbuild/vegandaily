@@ -31,4 +31,10 @@ export const curriedChickpeasToast: Recipe = {
         'Garnish with coriander and chili flakes.',
     ],
     tags: ['breakfast', 'toast', 'savory', 'spicy'],
+    nutritionPerServing: {
+        calories: 430,
+        protein: 14,
+        carbs: 60,
+        fat: 12,
+    },
 };

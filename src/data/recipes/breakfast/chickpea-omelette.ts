@@ -32,4 +32,10 @@ export const chickpeaOmelette: Recipe = {
         'Slice into quarters to serve.',
     ],
     tags: ['breakfast', 'high-protein', 'savory', 'gluten-free'],
+    nutritionPerServing: {
+        calories: 320,
+        protein: 14,
+        carbs: 42,
+        fat: 8,
+    },
 };

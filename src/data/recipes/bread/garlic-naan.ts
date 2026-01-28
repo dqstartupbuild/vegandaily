@@ -32,4 +32,10 @@ export const garlicNaan: Recipe = {
         'Brush naan with garlic butter and sprinkle with parsley.',
     ],
     tags: ['bread', 'indian', 'naan', 'garlic'],
+    nutritionPerServing: {
+        calories: 260,
+        protein: 6,
+        carbs: 42,
+        fat: 7,
+    },
 };

@@ -33,4 +33,10 @@ export const kimchi: Recipe = {
         'Move to fridge.',
     ],
     tags: ['snack', 'fermented', 'korean', 'probiotic', 'side'],
+    nutritionPerServing: {
+        calories: 25,
+        protein: 1,
+        carbs: 4,
+        fat: 0,
+    },
 };

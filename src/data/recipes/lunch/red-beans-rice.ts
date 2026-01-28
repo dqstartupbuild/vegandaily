@@ -31,4 +31,10 @@ export const redBeansRice: Recipe = {
         'Serve over white rice.',
     ],
     tags: ['lunch', 'dinner', 'cajun', 'meal-prep', 'budget'],
+    nutritionPerServing: {
+        calories: 430,
+        protein: 18,
+        carbs: 72,
+        fat: 4,
+    },
 };

@@ -38,4 +38,10 @@ export const oatmealCremePies: Recipe = {
         'Sandwich filling between two cooled cookies.',
     ],
     tags: ['dessert', 'cookies', 'oatmeal', 'creme-pie'],
+    nutritionPerServing: {
+        calories: 280,
+        protein: 3,
+        carbs: 38,
+        fat: 12,
+    },
 };

@@ -26,4 +26,10 @@ export const whiteBeanMash: Recipe = {
         'Serve mushrooms over the green mash.',
     ],
     tags: ['lunch', 'high-protein', 'quick', 'avocado'],
+    nutritionPerServing: {
+        calories: 410,
+        protein: 14,
+        carbs: 36,
+        fat: 22,
+    },
 };

@@ -39,4 +39,10 @@ export const matchaCookies: Recipe = {
         'Cool on baking sheet for a few minutes before transferring to a wire rack.',
     ],
     tags: ['dessert', 'cookies', 'matcha', 'chocolate'],
+    nutritionPerServing: {
+        calories: 220,
+        protein: 3,
+        carbs: 28,
+        fat: 11,
+    },
 };
