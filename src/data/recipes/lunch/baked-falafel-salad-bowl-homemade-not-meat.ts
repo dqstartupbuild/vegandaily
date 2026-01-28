@@ -4,7 +4,7 @@ export const bakedFalafelSaladBowlHomemadeNotMeat: Recipe = {
     id: 'baked-falafel-salad-bowl-homemade-not-meat',
     name: 'Baked Falafel Salad Bowl (Homemade, Not "Meat")',
     description: 'A fresh, colorful salad with bright flavors and a satisfying crunch.',
-    image: null,
+    image: require('../../../../assets/recipes/lunch/baked-falafel-salad-bowl.png'),
     mealType: 'lunch',
     prepTime: 15,
     cookTime: 25,

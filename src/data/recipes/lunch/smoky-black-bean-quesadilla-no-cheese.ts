@@ -4,7 +4,7 @@ export const smokyBlackBeanQuesadillaNoCheese: Recipe = {
     id: 'smoky-black-bean-quesadilla-no-cheese',
     name: 'Smoky Black Bean Quesadilla (No Cheese)',
     description: 'A flavorful, plant-based lunch recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/lunch/smoky-black-bean-quesadilla-no-cheese.png'),
     mealType: 'lunch',
     prepTime: 8,
     cookTime: 8,

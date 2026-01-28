@@ -4,7 +4,7 @@ export const savoryBreakfastLentilsGarlicGreens: Recipe = {
     id: 'savory-breakfast-lentils-garlic-greens',
     name: 'Savory Breakfast Lentils (Garlic + Greens)',
     description: 'A flavorful, plant-based breakfast recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/breakfast/savory-breakfast-lentils-garlic-greens.png'),
     mealType: 'breakfast',
     prepTime: 5,
     cookTime: 12,

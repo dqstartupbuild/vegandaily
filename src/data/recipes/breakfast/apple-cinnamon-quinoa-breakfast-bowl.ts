@@ -4,7 +4,7 @@ export const appleCinnamonQuinoaBreakfastBowl: Recipe = {
     id: 'apple-cinnamon-quinoa-breakfast-bowl',
     name: 'Apple-Cinnamon Quinoa Breakfast Bowl',
     description: 'A balanced bowl layered with vibrant veggies and hearty plant proteins.',
-    image: null,
+    image: require('../../../../assets/recipes/breakfast/apple-cinnamon-quinoa-breakfast-bowl.png'),
     mealType: 'breakfast',
     prepTime: 5,
     cookTime: 10,
