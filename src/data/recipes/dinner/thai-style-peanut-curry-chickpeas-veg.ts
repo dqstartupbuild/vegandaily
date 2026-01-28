@@ -4,7 +4,7 @@ export const thaiStylePeanutCurryChickpeasVeg: Recipe = {
     id: 'thai-style-peanut-curry-chickpeas-veg',
     name: 'Thai-Style Peanut Curry (Chickpeas + Veg)',
     description: 'A fragrant, creamy curry built for weeknight comfort.',
-    image: null,
+    image: require('../../../../assets/recipes/dinner/thai-peanut-chickpea-curry.png'),
     mealType: 'dinner',
     prepTime: 12,
     cookTime: 20,

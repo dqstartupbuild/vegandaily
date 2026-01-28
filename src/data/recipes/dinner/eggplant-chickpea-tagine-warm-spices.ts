@@ -4,7 +4,7 @@ export const eggplantChickpeaTagineWarmSpices: Recipe = {
     id: 'eggplant-chickpea-tagine-warm-spices',
     name: 'Eggplant Chickpea Tagine (Warm Spices)',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/dinner/eggplant-chickpea-tagine.png'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 30,

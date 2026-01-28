@@ -4,7 +4,7 @@ export const stuffedSweetPotatoesBlackBeansCornAvocado: Recipe = {
     id: 'stuffed-sweet-potatoes-black-beans-corn-avocado',
     name: 'Stuffed Sweet Potatoes (Black Beans + Corn + Avocado)',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/dinner/stuffed-sweet-potatoes.png'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 45,
