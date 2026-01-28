@@ -1,4 +1,4 @@
-// Date utility functions for EasyVegan app
+// Date utility functions for Vegan Daily app
 
 /**
  * Get the day of the year (1-365 or 1-366 for leap years)

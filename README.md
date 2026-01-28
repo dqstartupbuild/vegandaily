@@ -1,4 +1,4 @@
-# EasyVegan 🌱
+# Vegan Daily 🌱
 
 A React Native Expo Go app that suggests easy vegan meals for breakfast, lunch, and dinner every day.
 
@@ -23,7 +23,7 @@ A React Native Expo Go app that suggests easy vegan meals for breakfast, lunch, 
 
 ## Overview
 
-EasyVegan is a simple, no-account-required mobile app that helps users discover delicious vegan meals. Instead of overwhelming users with endless options, the app presents **one breakfast, one lunch, and one dinner suggestion each day**.
+Vegan Daily is a simple, no-account-required mobile app that helps users discover delicious vegan meals. Instead of overwhelming users with endless options, the app presents **one breakfast, one lunch, and one dinner suggestion each day**.
 
 ### Philosophy
 

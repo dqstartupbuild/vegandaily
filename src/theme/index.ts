@@ -1,4 +1,4 @@
-// Theme constants for EasyVegan app
+// Theme constants for Vegan Daily app
 // Centralized styling for consistent design
 
 export const colors = {

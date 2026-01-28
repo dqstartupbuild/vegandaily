@@ -4,7 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { theme } from '../src/theme';
 
 /**
- * Root layout for the EasyVegan app
+ * Root layout for the Vegan Daily app
  * Sets up navigation and safe area context
  */
 export default function RootLayout() {

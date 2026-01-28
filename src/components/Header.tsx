@@ -17,7 +17,7 @@ export const Header: React.FC<HeaderProps> = ({ showDate = true }) => {
   return (
     <View style={[styles.container, { paddingTop: insets.top + theme.spacing.md }]}>
       <View style={styles.content}>
-        <Text style={styles.title}>🌱 EasyVegan</Text>
+        <Text style={styles.title}>🌱 Vegan Daily</Text>
         {showDate && (
           <Text style={styles.date}>{getFormattedDate()}</Text>
         )}

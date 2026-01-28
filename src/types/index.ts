@@ -1,4 +1,4 @@
-// TypeScript type definitions for EasyVegan app
+// TypeScript type definitions for Vegan Daily app
 
 /**
  * Represents a meal type category

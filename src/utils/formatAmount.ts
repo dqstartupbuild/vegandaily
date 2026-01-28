@@ -1,5 +1,5 @@
 /**
- * Utility functions for formatting values in the EasyVegan app
+ * Utility functions for formatting values in the Vegan Daily app
  */
 
 /**
