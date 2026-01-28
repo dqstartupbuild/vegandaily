@@ -1,6 +1,9 @@
 import { Tabs } from 'expo-router';
 import { theme } from '../../src/theme';
 import { Ionicons } from '@expo/vector-icons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { View, StyleSheet, Pressable } from 'react-native';
+import type { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 
 /**
  * Tab layout for main navigation
@@ -9,6 +12,7 @@ import { Ionicons } from '@expo/vector-icons';
 export default function TabLayout() {
     return (
         <Tabs
+            tabBar={(props) => <CustomTabBar {...props} />}
             screenOptions={{
                 headerStyle: {
                     backgroundColor: theme.colors.primary,
@@ -16,20 +20,6 @@ export default function TabLayout() {
                 headerTintColor: theme.colors.textOnPrimary,
                 headerTitleStyle: {
                     fontWeight: '600',
-                },
-                tabBarStyle: {
-                    backgroundColor: theme.colors.surface,
-                    borderTopColor: theme.colors.border,
-                    paddingTop: 8,
-                    height: 90,
-                    paddingBottom: 20,
-                },
-                tabBarActiveTintColor: theme.colors.primary,
-                tabBarInactiveTintColor: theme.colors.textLight,
-                tabBarLabelStyle: {
-                    fontSize: 12,
-                    fontWeight: '600',
-                    marginBottom: 4,
                 },
             }}
         >
@@ -67,8 +57,7 @@ export default function TabLayout() {
     );
 }
 
-// Simple tab icon component
-import { View, StyleSheet } from 'react-native';
+const TAB_BAR_HEIGHT = 56;
 
 interface TabIconProps {
     name: keyof typeof Ionicons.glyphMap;
@@ -79,13 +68,87 @@ const TabIcon: React.FC<TabIconProps> = ({ name, focused }) => (
     <View style={[styles.iconContainer, focused && styles.iconFocused]}>
         <Ionicons 
             name={name} 
-            size={24} 
+            size={26} 
             color={focused ? theme.colors.primary : theme.colors.textLight} 
         />
     </View>
 );
 
+const CustomTabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigation }) => {
+    const insets = useSafeAreaInsets();
+
+    return (
+        <View
+            style={[
+                styles.tabBar,
+                {
+                    height: TAB_BAR_HEIGHT + insets.bottom,
+                    paddingBottom: insets.bottom,
+                },
+            ]}
+        >
+            {state.routes.map((route, index) => {
+                const { options } = descriptors[route.key];
+                const focused = state.index === index;
+
+                const icon = options.tabBarIcon?.({
+                    focused,
+                    color: focused ? theme.colors.primary : theme.colors.textLight,
+                    size: 26,
+                });
+
+                const onPress = () => {
+                    const event = navigation.emit({
+                        type: 'tabPress',
+                        target: route.key,
+                        canPreventDefault: true,
+                    });
+
+                    if (!focused && !event.defaultPrevented) {
+                        navigation.navigate(route.name);
+                    }
+                };
+
+                const onLongPress = () => {
+                    navigation.emit({
+                        type: 'tabLongPress',
+                        target: route.key,
+                    });
+                };
+
+                return (
+                    <Pressable
+                        key={route.key}
+                        accessibilityRole="button"
+                        accessibilityState={focused ? { selected: true } : {}}
+                        onPress={onPress}
+                        onLongPress={onLongPress}
+                        style={styles.tabItem}
+                    >
+                        {icon}
+                    </Pressable>
+                );
+            })}
+        </View>
+    );
+};
+
 const styles = StyleSheet.create({
+    tabBar: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        backgroundColor: theme.colors.surface,
+        borderTopWidth: 1,
+        borderTopColor: theme.colors.border,
+        paddingTop: 6,
+    },
+    tabItem: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 6,
+    },
     iconContainer: {
         padding: 4,
         borderRadius: 8,
