@@ -34,37 +34,43 @@ const chips: ChipConfig[] = [
  */
 export const FilterChips: React.FC<FilterChipsProps> = ({ selected, onSelect }) => {
     return (
-        <ScrollView
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            contentContainerStyle={styles.container}
-        >
-            {chips.map((chip) => {
-                const isSelected = selected === chip.key;
-                return (
-                    <TouchableOpacity
-                        key={chip.key}
-                        style={[styles.chip, isSelected && styles.chipSelected]}
-                        onPress={() => onSelect(chip.key)}
-                        activeOpacity={0.8}
-                    >
-                        <Text style={styles.chipEmoji}>{chip.emoji}</Text>
-                        <Text style={[styles.chipLabel, isSelected && styles.chipLabelSelected]}>
-                            {chip.label}
-                        </Text>
-                    </TouchableOpacity>
-                );
-            })}
-        </ScrollView>
+        <View style={styles.wrapper}>
+            <ScrollView
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={styles.container}
+            >
+                {chips.map((chip) => {
+                    const isSelected = selected === chip.key;
+                    return (
+                        <TouchableOpacity
+                            key={chip.key}
+                            style={[styles.chip, isSelected && styles.chipSelected]}
+                            onPress={() => onSelect(chip.key)}
+                            activeOpacity={0.8}
+                        >
+                            <Text style={styles.chipEmoji}>{chip.emoji}</Text>
+                            <Text style={[styles.chipLabel, isSelected && styles.chipLabelSelected]}>
+                                {chip.label}
+                            </Text>
+                        </TouchableOpacity>
+                    );
+                })}
+            </ScrollView>
+        </View>
     );
 };
 
 const styles = StyleSheet.create({
+    wrapper: {
+        height: 60,
+    },
     container: {
         flexDirection: 'row',
         paddingHorizontal: theme.spacing.lg,
-        paddingVertical: theme.spacing.sm,
+        alignItems: 'center', // Vertically center chips
         gap: theme.spacing.sm,
+        // Height is controlled by wrapper
     },
     chip: {
         flexDirection: 'row',

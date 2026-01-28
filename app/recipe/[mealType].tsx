@@ -1,8 +1,10 @@
-import { View, StyleSheet } from 'react-native';
-import { useLocalSearchParams, Stack } from 'expo-router';
+import React, { useEffect } from 'react';
+import { View, StyleSheet, ActivityIndicator, Text } from 'react-native';
+import { useLocalSearchParams, Stack, useRouter } from 'expo-router';
 import { RecipeDisplay } from '../../src/components/RecipeDisplay';
 import { BookmarkButton } from '../../src/components/BookmarkButton';
-import { getDailyRecipe } from '../../src/utils/recipeSelector';
+import { useDailyRecipe } from '../../src/context/DailyRecipeContext';
+import { getRecipeById } from '../../src/data/recipes';
 import { MealType } from '../../src/types';
 import { theme } from '../../src/theme';
 
@@ -20,6 +22,8 @@ const mealLabels: Record<MealType, string> = {
  */
 export default function RecipeScreen() {
     const { mealType } = useLocalSearchParams<{ mealType: MealType }>();
+    const { getDailyRecipeId, isLoading: isContextLoading } = useDailyRecipe();
+    const router = useRouter();
 
     // Validate meal type
     const validMealType: MealType =
@@ -32,22 +36,40 @@ export default function RecipeScreen() {
             ? mealType
             : 'breakfast';
 
-    const recipe = getDailyRecipe(validMealType);
+    // Get persisted daily recipe ID
+    const recipeId = getDailyRecipeId(validMealType);
+    const recipe = recipeId ? getRecipeById(recipeId) : null;
+    
     const headerTitle = `Today's ${mealLabels[validMealType]}`;
+
+    if (isContextLoading) {
+        return (
+            <View style={styles.loadingContainer}>
+                <ActivityIndicator size="large" color={theme.colors.primary} />
+            </View>
+        );
+    }
+
+    if (!recipe) {
+        return (
+            <View style={styles.container}>
+                 <Stack.Screen options={{ headerTitle }} />
+                 <View style={styles.centerContent}>
+                    <Text>Recipe not found. Please try again.</Text>
+                 </View>
+            </View>
+        );
+    }
 
     return (
         <View style={styles.container}>
             <Stack.Screen
                 options={{
                     headerTitle,
+                    headerRight: () => <BookmarkButton recipeId={recipe.id} variant="icon" />,
                 }}
             />
             <RecipeDisplay recipe={recipe} />
-
-            {/* Floating Bookmark Button */}
-            <View style={styles.bookmarkContainer}>
-                <BookmarkButton recipeId={recipe.id} />
-            </View>
         </View>
     );
 }
@@ -57,11 +79,15 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: theme.colors.background,
     },
-    bookmarkContainer: {
-        position: 'absolute',
-        bottom: theme.spacing.xl,
-        right: theme.spacing.lg,
-        left: theme.spacing.lg,
+    loadingContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: theme.colors.background,
+    },
+    centerContent: {
+        flex: 1,
+        justifyContent: 'center',
         alignItems: 'center',
     },
 });

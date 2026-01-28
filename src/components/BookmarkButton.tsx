@@ -8,18 +8,30 @@ import { useBookmarks } from '../context/BookmarkContext';
 
 interface BookmarkButtonProps {
     recipeId: string;
+    variant?: 'pill' | 'icon';
 }
 
 /**
- * Floating bookmark button for recipe detail view
+ * Bookmark button for recipe view
  */
-export const BookmarkButton: React.FC<BookmarkButtonProps> = ({ recipeId }) => {
+export const BookmarkButton: React.FC<BookmarkButtonProps> = ({ 
+    recipeId, 
+    variant = 'pill' 
+}) => {
     const { isBookmarked, toggleBookmark } = useBookmarks();
     const bookmarked = isBookmarked(recipeId);
 
     const handlePress = () => {
         toggleBookmark(recipeId);
     };
+
+    if (variant === 'icon') {
+        return (
+            <TouchableOpacity onPress={handlePress} activeOpacity={0.7} style={styles.iconButton}>
+                <Text style={styles.headerIcon}>{bookmarked ? '🔖' : '📑'}</Text>
+            </TouchableOpacity>
+        );
+    }
 
     return (
         <TouchableOpacity
@@ -52,6 +64,12 @@ const styles = StyleSheet.create({
     buttonActive: {
         backgroundColor: theme.colors.primaryLight,
         borderColor: theme.colors.primary,
+    },
+    iconButton: {
+        padding: 8,
+    },
+    headerIcon: {
+        fontSize: 24,
     },
     icon: {
         fontSize: 20,

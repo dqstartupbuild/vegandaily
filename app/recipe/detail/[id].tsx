@@ -30,14 +30,10 @@ export default function RecipeDetailScreen() {
             <Stack.Screen
                 options={{
                     headerTitle: recipe.name,
+                    headerRight: () => <BookmarkButton recipeId={recipe.id} variant="icon" />,
                 }}
             />
             <RecipeDisplay recipe={recipe} />
-            
-            {/* Floating Bookmark Button */}
-            <View style={styles.bookmarkContainer}>
-                <BookmarkButton recipeId={recipe.id} />
-            </View>
         </View>
     );
 }
@@ -51,12 +47,5 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-    },
-    bookmarkContainer: {
-        position: 'absolute',
-        bottom: theme.spacing.xl,
-        right: theme.spacing.lg,
-        left: theme.spacing.lg,
-        alignItems: 'center',
     },
 });
