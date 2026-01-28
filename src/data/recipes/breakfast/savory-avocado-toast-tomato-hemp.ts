@@ -4,7 +4,7 @@ export const savoryAvocadoToastTomatoHemp: Recipe = {
     id: 'savory-avocado-toast-tomato-hemp',
     name: 'Savory Avocado Toast + Tomato & Hemp',
     description: 'A flavorful, plant-based breakfast recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/savory-avocado-toast-tomato-hemp.png'),
     mealType: 'breakfast',
     prepTime: 8,
     cookTime: 3,

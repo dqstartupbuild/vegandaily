@@ -4,7 +4,7 @@ export const dateNutBreakfastBarsNoBake: Recipe = {
     id: 'date-nut-breakfast-bars-no-bake',
     name: 'Date-Nut Breakfast Bars (No Bake)',
     description: 'A grab-and-go bar that\'s chewy, sweet, and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/date-nut-breakfast-bars-no-bake.png'),
     mealType: 'breakfast',
     prepTime: 12,
     cookTime: 0,

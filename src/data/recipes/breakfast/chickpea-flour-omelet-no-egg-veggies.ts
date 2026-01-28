@@ -4,7 +4,7 @@ export const chickpeaFlourOmeletNoEggVeggies: Recipe = {
     id: 'chickpea-flour-omelet-no-egg-veggies',
     name: 'Chickpea Flour "Omelet" (No Egg) + Veggies',
     description: 'A flavorful, plant-based breakfast recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/chickpea-flour-omelet-veggies.png'),
     mealType: 'breakfast',
     prepTime: 10,
     cookTime: 10,

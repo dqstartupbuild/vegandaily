@@ -4,7 +4,7 @@ export const lentilVeggieSoupOnePot: Recipe = {
     id: 'lentil-veggie-soup-one-pot',
     name: 'Lentil Veggie Soup (One Pot)',
     description: 'A cozy, savory bowl that\'s hearty, warming, and easy to make.',
-    image: null,
+    image: require('../../../../assets/recipes/lentil-veggie-soup-one-pot.png'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 30,

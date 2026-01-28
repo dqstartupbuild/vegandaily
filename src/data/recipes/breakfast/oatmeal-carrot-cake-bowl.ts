@@ -4,7 +4,7 @@ export const oatmealCarrotCakeBowl: Recipe = {
     id: 'oatmeal-carrot-cake-bowl',
     name: 'Oatmeal Carrot Cake Bowl',
     description: 'A balanced bowl layered with vibrant veggies and hearty plant proteins.',
-    image: null,
+    image: require('../../../../assets/recipes/oatmeal-carrot-cake-bowl.png'),
     mealType: 'breakfast',
     prepTime: 6,
     cookTime: 6,
