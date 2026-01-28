@@ -9,7 +9,7 @@ export const pastaPrimavera: Recipe = {
     name: 'Pasta Primavera',
     description:
         'A vibrant Italian pasta dish bursting with fresh seasonal vegetables, tossed in a light garlic and olive oil sauce. Simple, satisfying, and full of flavor.',
-    image: require('../../../../assets/recipes/pasta-primavera.png'),
+    image: require('../../../../assets/recipes/dinner/pasta-primavera.png'),
     mealType: 'dinner',
     prepTime: 15,
     cookTime: 20,

@@ -4,7 +4,7 @@ export const curriedChickpeasToast: Recipe = {
     id: 'curried-chickpeas-toast',
     name: 'Curried Chickpeas on Toast',
     description: 'Savory, spicy chickpeas with caramelized onions on toasted sourdough.',
-    image: require('../../../../assets/recipes/chickpeas-toast.png'),
+    image: require('../../../../assets/recipes/breakfast/chickpeas-toast.png'),
     mealType: 'breakfast',
     prepTime: 10,
     cookTime: 15,

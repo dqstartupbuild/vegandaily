@@ -4,7 +4,7 @@ export const blackBeanSweetPotatoChili: Recipe = {
     id: 'black-bean-sweet-potato-chili',
     name: 'Black Bean Sweet Potato Chili',
     description: 'A hearty, smoky chili with plenty of plant protein.',
-    image: require('../../../../assets/recipes/black-bean-sweet-potato-chili.png'),
+    image: require('../../../../assets/recipes/dinner/black-bean-sweet-potato-chili.png'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 35,

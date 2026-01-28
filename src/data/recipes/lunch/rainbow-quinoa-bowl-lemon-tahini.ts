@@ -4,7 +4,7 @@ export const rainbowQuinoaBowlLemonTahini: Recipe = {
     id: 'rainbow-quinoa-bowl-lemon-tahini',
     name: 'Rainbow Quinoa Bowl + Lemon-Tahini',
     description: 'A balanced bowl layered with vibrant veggies and hearty plant proteins.',
-    image: require('../../../../assets/recipes/rainbow-quinoa-bowl-lemon-tahini.png'),
+    image: require('../../../../assets/recipes/lunch/rainbow-quinoa-bowl-lemon-tahini.png'),
     mealType: 'lunch',
     prepTime: 15,
     cookTime: 15,

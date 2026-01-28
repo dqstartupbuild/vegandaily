@@ -4,7 +4,7 @@ export const matchaCookies: Recipe = {
     id: 'matcha-cookies',
     name: 'Matcha Chocolate Chip Gem Cookies',
     description: 'Soft and chewy vegan matcha cookies studded with white and dark chocolate chips and colorful chocolate gems.',
-    image: require('../../../../assets/recipes/matcha-cookies.png'),
+    image: require('../../../../assets/recipes/dessert/matcha-cookies.png'),
     mealType: 'dessert',
     prepTime: 20,
     cookTime: 12,

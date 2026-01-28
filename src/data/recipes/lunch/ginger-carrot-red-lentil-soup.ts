@@ -4,7 +4,7 @@ export const gingerCarrotRedLentilSoup: Recipe = {
     id: 'ginger-carrot-red-lentil-soup',
     name: 'Ginger Carrot Red Lentil Soup',
     description: 'A cozy, savory bowl that\'s hearty, warming, and easy to make.',
-    image: require('../../../../assets/recipes/ginger-carrot-red-lentil-soup.png'),
+    image: require('../../../../assets/recipes/lunch/ginger-carrot-red-lentil-soup.png'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 25,

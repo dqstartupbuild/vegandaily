@@ -4,7 +4,7 @@ export const roastedVeggieHummusPita: Recipe = {
     id: 'roasted-veggie-hummus-pita',
     name: 'Roasted Veggie + Hummus Pita',
     description: 'A flavorful, plant-based lunch recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/roasted-veggie-hummus-pita.png'),
+    image: require('../../../../assets/recipes/lunch/roasted-veggie-hummus-pita.png'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 20,

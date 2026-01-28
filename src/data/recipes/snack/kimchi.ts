@@ -4,7 +4,7 @@ export const kimchi: Recipe = {
     id: 'kimchi',
     name: 'Homemade Vegan Kimchi',
     description: 'A spicy, tangy, probiotic-rich Korean staple made without fish sauce.',
-    image: require('../../../../assets/recipes/kimchi.png'),
+    image: require('../../../../assets/recipes/snack/kimchi.png'),
     mealType: 'snack',
     prepTime: 45, // Plus 2 days fermenting
     cookTime: 0,

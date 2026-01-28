@@ -4,7 +4,7 @@ export const berryChiaPudding: Recipe = {
     id: 'berry-chia-pudding',
     name: 'Berry Chia Pudding',
     description: 'A flavorful, plant-based breakfast recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/berry-chia-pudding.png'),
+    image: require('../../../../assets/recipes/breakfast/berry-chia-pudding.png'),
     mealType: 'breakfast',
     prepTime: 8,
     cookTime: 0,

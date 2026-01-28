@@ -4,7 +4,7 @@ export const chickpeaOmelette: Recipe = {
     id: 'chickpea-omelette',
     name: 'Chickpea Vegetable Omelette',
     description: 'High-protein, egg-free omelette made from chickpea flour and packed with fresh veggies.',
-    image: require('../../../../assets/recipes/omelette.png'),
+    image: require('../../../../assets/recipes/breakfast/omelette.png'),
     mealType: 'breakfast',
     prepTime: 10,
     cookTime: 10,

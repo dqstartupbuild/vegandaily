@@ -4,7 +4,7 @@ export const sweetPotatoBreakfastHashBeansGreens: Recipe = {
     id: 'sweet-potato-breakfast-hash-beans-greens',
     name: 'Sweet Potato Breakfast Hash (Beans + Greens)',
     description: 'A flavorful, plant-based breakfast recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/sweet-potato-breakfast-hash-beans-greens.png'),
+    image: require('../../../../assets/recipes/breakfast/sweet-potato-breakfast-hash-beans-greens.png'),
     mealType: 'breakfast',
     prepTime: 10,
     cookTime: 18,

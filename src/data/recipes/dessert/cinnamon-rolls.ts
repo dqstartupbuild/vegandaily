@@ -4,7 +4,7 @@ export const cinnamonRolls: Recipe = {
     id: 'cinnamon-rolls',
     name: 'Fluffy Vegan Cinnamon Rolls',
     description: 'Soft, gooey cinnamon rolls with a rich vanilla frosting.',
-    image: require('../../../../assets/recipes/cinnamon-rolls.png'),
+    image: require('../../../../assets/recipes/dessert/cinnamon-rolls.png'),
     mealType: 'dessert',
     prepTime: 45,
     cookTime: 25,

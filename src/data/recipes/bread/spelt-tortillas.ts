@@ -4,7 +4,7 @@ export const speltTortillas: Recipe = {
     id: 'spelt-tortillas',
     name: 'Homemade Spelt Tortillas',
     description: 'Simple, wholesome tortillas made with spelt flour.',
-    image: require('../../../../assets/recipes/spelt-tortillas.png'),
+    image: require('../../../../assets/recipes/bread/spelt-tortillas.png'),
     mealType: 'bread',
     prepTime: 20,
     cookTime: 10,
