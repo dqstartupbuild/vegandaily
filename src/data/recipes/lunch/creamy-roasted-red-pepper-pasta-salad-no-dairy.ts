@@ -4,7 +4,7 @@ export const creamyRoastedRedPepperPastaSaladNoDairy: Recipe = {
     id: 'creamy-roasted-red-pepper-pasta-salad-no-dairy',
     name: 'Creamy Roasted Red Pepper Pasta Salad (No Dairy)',
     description: 'A fresh, colorful salad with bright flavors and a satisfying crunch.',
-    image: null,
+    image: require('../../../../assets/recipes/creamy-roasted-red-pepper-pasta-salad.png'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 12,

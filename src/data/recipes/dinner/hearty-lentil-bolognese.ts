@@ -4,7 +4,7 @@ export const heartyLentilBolognese: Recipe = {
     id: 'hearty-lentil-bolognese',
     name: 'Hearty Lentil Bolognese',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/hearty-lentil-bolognese.png'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 30,

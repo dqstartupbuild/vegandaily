@@ -4,7 +4,7 @@ export const veggieFriedRiceChickpeasInsteadOfEggMeat: Recipe = {
     id: 'veggie-fried-rice-chickpeas-instead-of-egg-meat',
     name: 'Veggie Fried Rice (Chickpeas Instead of Egg/Meat)',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/veggie-fried-rice-chickpeas.png'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 12,

@@ -4,7 +4,7 @@ export const sweetPotatoWhiteBeanKaleSalad: Recipe = {
     id: 'sweet-potato-white-bean-kale-salad',
     name: 'Sweet Potato + White Bean Kale Salad',
     description: 'A fresh, colorful salad with bright flavors and a satisfying crunch.',
-    image: null,
+    image: require('../../../../assets/recipes/sweet-potato-white-bean-kale-salad.png'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 20,

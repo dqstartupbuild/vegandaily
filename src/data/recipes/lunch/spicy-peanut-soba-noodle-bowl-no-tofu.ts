@@ -4,7 +4,7 @@ export const spicyPeanutSobaNoodleBowlNoTofu: Recipe = {
     id: 'spicy-peanut-soba-noodle-bowl-no-tofu',
     name: 'Spicy Peanut Soba Noodle Bowl (No Tofu)',
     description: 'A balanced bowl layered with vibrant veggies and hearty plant proteins.',
-    image: null,
+    image: require('../../../../assets/recipes/spicy-peanut-soba-noodle-bowl.png'),
     mealType: 'lunch',
     prepTime: 12,
     cookTime: 8,

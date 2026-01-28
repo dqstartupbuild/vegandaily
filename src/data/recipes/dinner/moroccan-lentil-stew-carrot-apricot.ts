@@ -4,7 +4,7 @@ export const moroccanLentilStewCarrotApricot: Recipe = {
     id: 'moroccan-lentil-stew-carrot-apricot',
     name: 'Moroccan Lentil Stew (Carrot + Apricot)',
     description: 'A cozy, savory bowl that\'s hearty, warming, and easy to make.',
-    image: null,
+    image: require('../../../../assets/recipes/moroccan-lentil-stew-carrot-apricot.png'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 35,

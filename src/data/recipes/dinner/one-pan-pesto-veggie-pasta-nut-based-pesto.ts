@@ -4,7 +4,7 @@ export const onePanPestoVeggiePastaNutBasedPesto: Recipe = {
     id: 'one-pan-pesto-veggie-pasta-nut-based-pesto',
     name: 'One-Pan Pesto Veggie Pasta (Nut-Based Pesto)',
     description: 'A comforting pasta dish with bold, plant-forward flavors and a silky sauce.',
-    image: null,
+    image: require('../../../../assets/recipes/one-pan-pesto-veggie-pasta.png'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 15,

@@ -4,7 +4,7 @@ export const coconutChickpeaCurrySpinach: Recipe = {
     id: 'coconut-chickpea-curry-spinach',
     name: 'Coconut Chickpea Curry (Spinach)',
     description: 'A fragrant, creamy curry built for weeknight comfort.',
-    image: null,
+    image: require('../../../../assets/recipes/coconut-chickpea-curry-spinach.png'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 20,

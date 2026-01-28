@@ -4,7 +4,7 @@ export const tomatoBasilWhiteBeanToasts: Recipe = {
     id: 'tomato-basil-white-bean-toasts',
     name: 'Tomato Basil White Bean Toasts',
     description: 'A flavorful, plant-based lunch recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/tomato-basil-white-bean-toasts.png'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 3,
