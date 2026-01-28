@@ -19,7 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Moved servings display from static header meta to interactive adjuster
 - Updated project documentation
-- Replaced boilerplate Expo icons with custom avocado branding (icon, adaptive-icon, splash, favicon)
+- Replaced boilerplate Expo icons with custom vegan branding (icon, adaptive-icon, splash, favicon)
 - Corrected utility import paths in components
 
 ---
