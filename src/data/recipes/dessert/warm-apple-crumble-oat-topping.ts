@@ -4,7 +4,7 @@ export const warmAppleCrumbleOatTopping: Recipe = {
     id: 'warm-apple-crumble-oat-topping',
     name: 'Warm Apple Crumble (Oat Topping)',
     description: 'A flavorful, plant-based dessert recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/dessert/warm-apple-crumble-oat-topping.png'),
     mealType: 'dessert',
     prepTime: 12,
     cookTime: 30,

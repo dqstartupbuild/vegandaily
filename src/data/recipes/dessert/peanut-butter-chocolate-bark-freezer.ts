@@ -4,7 +4,7 @@ export const peanutButterChocolateBarkFreezer: Recipe = {
     id: 'peanut-butter-chocolate-bark-freezer',
     name: 'Peanut Butter Chocolate Bark (Freezer)',
     description: 'A grab-and-go bar that\'s chewy, sweet, and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/dessert/peanut-butter-chocolate-bark-freezer.png'),
     mealType: 'dessert',
     prepTime: 10,
     cookTime: 0,

@@ -4,7 +4,7 @@ export const quickPickledCucumbers: Recipe = {
     id: 'quick-pickled-cucumbers',
     name: 'Quick Pickled Cucumbers',
     description: 'A flavorful, plant-based snack recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/snack/quick-pickled-cucumbers.png'),
     mealType: 'snack',
     prepTime: 8,
     cookTime: 0,

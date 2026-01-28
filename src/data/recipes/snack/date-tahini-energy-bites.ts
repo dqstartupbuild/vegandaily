@@ -4,7 +4,7 @@ export const dateTahiniEnergyBites: Recipe = {
     id: 'date-tahini-energy-bites',
     name: 'Date-Tahini Energy Bites',
     description: 'A flavorful, plant-based snack recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/snack/date-tahini-energy-bites.png'),
     mealType: 'snack',
     prepTime: 12,
     cookTime: 0,

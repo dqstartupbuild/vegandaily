@@ -4,7 +4,7 @@ export const smokySalsaStyleBlackBeanDip: Recipe = {
     id: 'smoky-salsa-style-black-bean-dip',
     name: 'Smoky Salsa-Style Black Bean Dip',
     description: 'A flavorful, plant-based snack recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/snack/smoky-salsa-style-black-bean-dip.png'),
     mealType: 'snack',
     prepTime: 8,
     cookTime: 0,

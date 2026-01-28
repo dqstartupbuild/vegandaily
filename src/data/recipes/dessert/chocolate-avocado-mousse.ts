@@ -4,7 +4,7 @@ export const chocolateAvocadoMousse: Recipe = {
     id: 'chocolate-avocado-mousse',
     name: 'Chocolate Avocado Mousse',
     description: 'A flavorful, plant-based dessert recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/dessert/chocolate-avocado-mousse.png'),
     mealType: 'dessert',
     prepTime: 10,
     cookTime: 0,

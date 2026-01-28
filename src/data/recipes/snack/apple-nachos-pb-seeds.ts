@@ -4,7 +4,7 @@ export const appleNachosPbSeeds: Recipe = {
     id: 'apple-nachos-pb-seeds',
     name: 'Apple Nachos (PB + Seeds)',
     description: 'A flavorful, plant-based snack recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/snack/apple-nachos-pb-seeds.png'),
     mealType: 'snack',
     prepTime: 7,
     cookTime: 0,

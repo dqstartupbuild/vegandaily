@@ -4,7 +4,7 @@ export const lemonBlueberryChiaJam: Recipe = {
     id: 'lemon-blueberry-chia-jam',
     name: 'Lemon Blueberry Chia Jam',
     description: 'A flavorful, plant-based dessert recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/dessert/lemon-blueberry-chia-jam.png'),
     mealType: 'dessert',
     prepTime: 5,
     cookTime: 10,
