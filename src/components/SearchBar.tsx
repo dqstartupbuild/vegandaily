@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { View, TextInput, StyleSheet, TouchableOpacity, Text } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { theme } from '../theme';
 
 interface SearchBarProps {
@@ -23,7 +24,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
 
     return (
         <View style={styles.container}>
-            <Text style={styles.searchIcon}>🔍</Text>
+            <Ionicons name="search" size={20} color={theme.colors.textLight} style={styles.searchIcon} />
             <TextInput
                 style={styles.input}
                 value={value}
@@ -40,7 +41,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
                     onPress={() => onChangeText('')}
                     hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
                 >
-                    <Text style={styles.clearIcon}>✕</Text>
+                    <Ionicons name="close-circle" size={18} color={theme.colors.textLight} />
                 </TouchableOpacity>
             )}
         </View>
@@ -61,7 +62,6 @@ const styles = StyleSheet.create({
         ...theme.shadows.sm,
     },
     searchIcon: {
-        fontSize: 18,
         marginRight: theme.spacing.sm,
     },
     input: {
@@ -73,8 +73,5 @@ const styles = StyleSheet.create({
     clearButton: {
         padding: theme.spacing.xs,
     },
-    clearIcon: {
-        fontSize: 16,
-        color: theme.colors.textLight,
-    },
+    // clearIcon style removed as standard icon is used
 });

@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { View, TouchableOpacity, Text, ScrollView, StyleSheet } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../theme';
 import { MealType } from '../types';
 
@@ -16,17 +17,17 @@ interface FilterChipsProps {
 interface ChipConfig {
     key: FilterOption;
     label: string;
-    emoji: string;
+    iconName: keyof typeof MaterialCommunityIcons.glyphMap;
 }
 
 const chips: ChipConfig[] = [
-    { key: 'all', label: 'All', emoji: '🍽️' },
-    { key: 'breakfast', label: 'Breakfast', emoji: '🌅' },
-    { key: 'lunch', label: 'Lunch', emoji: '☀️' },
-    { key: 'dinner', label: 'Dinner', emoji: '🌙' },
-    { key: 'dessert', label: 'Dessert', emoji: '🍪' },
-    { key: 'snack', label: 'Snack', emoji: '🍿' },
-    { key: 'bread', label: 'Bread', emoji: '🍞' },
+    { key: 'all', label: 'All', iconName: 'silverware-fork-knife' },
+    { key: 'breakfast', label: 'Breakfast', iconName: 'coffee-outline' },
+    { key: 'lunch', label: 'Lunch', iconName: 'white-balance-sunny' },
+    { key: 'dinner', label: 'Dinner', iconName: 'weather-night' },
+    { key: 'dessert', label: 'Dessert', iconName: 'cookie-outline' },
+    { key: 'snack', label: 'Snack', iconName: 'popcorn' },
+    { key: 'bread', label: 'Bread', iconName: 'bread-slice' },
 ];
 
 /**
@@ -49,7 +50,11 @@ export const FilterChips: React.FC<FilterChipsProps> = ({ selected, onSelect }) 
                             onPress={() => onSelect(chip.key)}
                             activeOpacity={0.8}
                         >
-                            <Text style={styles.chipEmoji}>{chip.emoji}</Text>
+                            <MaterialCommunityIcons 
+                                name={chip.iconName} 
+                                size={18} 
+                                color={isSelected ? theme.colors.textOnPrimary : theme.colors.text} 
+                            />
                             <Text style={[styles.chipLabel, isSelected && styles.chipLabelSelected]}>
                                 {chip.label}
                             </Text>
@@ -86,9 +91,6 @@ const styles = StyleSheet.create({
     chipSelected: {
         backgroundColor: theme.colors.primary,
         borderColor: theme.colors.primary,
-    },
-    chipEmoji: {
-        fontSize: 16,
     },
     chipLabel: {
         fontSize: theme.typography.sizes.sm,

@@ -71,7 +71,7 @@ export default function BookmarksScreen() {
                 />
             ) : (
                 <EmptyState
-                    emoji="📚"
+                    iconName="bookmark-outline"
                     title="No saved recipes yet"
                     message="Tap the bookmark icon on any recipe to save it here for quick access."
                 />

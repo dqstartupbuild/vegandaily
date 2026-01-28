@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { TouchableOpacity, View, Text, StyleSheet, Image } from 'react-native';
+import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 import { theme } from '../theme';
 import { Recipe, MealType } from '../types';
 import { useBookmarks } from '../context/BookmarkContext';
@@ -12,13 +13,13 @@ interface RecipeCardProps {
     onPress: () => void;
 }
 
-const mealEmojis: Record<MealType, string> = {
-    breakfast: '🌅',
-    lunch: '☀️',
-    dinner: '🌙',
-    dessert: '🍪',
-    snack: '🍿',
-    bread: '🍞',
+const mealIcons: Record<MealType, keyof typeof MaterialCommunityIcons.glyphMap> = {
+    breakfast: 'coffee-outline',
+    lunch: 'white-balance-sunny',
+    dinner: 'weather-night',
+    dessert: 'cookie-outline',
+    snack: 'popcorn',
+    bread: 'bread-slice',
 };
 
 const difficultyColors = {
@@ -47,7 +48,11 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, onPress }) => {
                 <Image source={recipe.image} style={styles.thumbnail} />
             ) : (
                 <View style={styles.mealBadge}>
-                    <Text style={styles.mealEmoji}>{mealEmojis[recipe.mealType]}</Text>
+                    <MaterialCommunityIcons 
+                        name={mealIcons[recipe.mealType]} 
+                        size={24} 
+                        color={theme.colors.primary} 
+                    />
                 </View>
             )}
 
@@ -63,7 +68,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, onPress }) => {
                 {/* Meta Info */}
                 <View style={styles.metaRow}>
                     <View style={styles.metaItem}>
-                        <Text style={styles.metaIcon}>⏱️</Text>
+                        <Ionicons name="time-outline" size={14} color={theme.colors.textLight} style={styles.metaIcon} />
                         <Text style={styles.metaText}>{totalTime} min</Text>
                     </View>
                     <View style={[styles.difficultyBadge, { backgroundColor: difficultyColors[recipe.difficulty] }]}>
@@ -74,7 +79,11 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, onPress }) => {
 
             {/* Bookmark Button */}
             <TouchableOpacity style={styles.bookmarkButton} onPress={handleBookmarkPress} hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}>
-                <Text style={styles.bookmarkIcon}>{bookmarked ? '🔖' : '📑'}</Text>
+                <Ionicons 
+                    name={bookmarked ? "bookmark" : "bookmark-outline"} 
+                    size={24} 
+                    color={bookmarked ? theme.colors.primary : theme.colors.textLight} 
+                />
             </TouchableOpacity>
         </TouchableOpacity>
     );
@@ -98,9 +107,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginRight: theme.spacing.md,
-    },
-    mealEmoji: {
-        fontSize: 24,
     },
     thumbnail: {
         width: 48,
@@ -135,7 +141,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     metaIcon: {
-        fontSize: 12,
         marginRight: theme.spacing.xs,
     },
     metaText: {
@@ -156,8 +161,5 @@ const styles = StyleSheet.create({
     bookmarkButton: {
         justifyContent: 'center',
         paddingLeft: theme.spacing.sm,
-    },
-    bookmarkIcon: {
-        fontSize: 24,
     },
 });

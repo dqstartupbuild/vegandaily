@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { theme } from '../theme';
 
 interface ServingsAdjusterProps {
@@ -29,7 +30,7 @@ export const ServingsAdjuster: React.FC<ServingsAdjusterProps> = ({
   return (
     <View style={styles.container}>
       <View style={styles.labelRow}>
-        <Text style={styles.emoji}>🍽️</Text>
+        <Ionicons name="restaurant-outline" size={20} color={theme.colors.textLight} style={styles.labelIcon} />
         <Text style={styles.label}>Servings</Text>
       </View>
 
@@ -40,9 +41,11 @@ export const ServingsAdjuster: React.FC<ServingsAdjusterProps> = ({
           disabled={isAtMin}
           activeOpacity={0.7}
         >
-          <Text style={[styles.buttonText, isAtMin && styles.buttonTextDisabled]}>
-            −
-          </Text>
+          <Ionicons 
+            name="remove" 
+            size={24} 
+            color={isAtMin ? theme.colors.textLight : theme.colors.textOnPrimary} 
+          />
         </TouchableOpacity>
 
         <View style={styles.valueContainer}>
@@ -60,9 +63,11 @@ export const ServingsAdjuster: React.FC<ServingsAdjusterProps> = ({
           disabled={isAtMax}
           activeOpacity={0.7}
         >
-          <Text style={[styles.buttonText, isAtMax && styles.buttonTextDisabled]}>
-            +
-          </Text>
+          <Ionicons 
+            name="add" 
+            size={24} 
+            color={isAtMax ? theme.colors.textLight : theme.colors.textOnPrimary} 
+          />
         </TouchableOpacity>
       </View>
     </View>
@@ -81,8 +86,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: theme.spacing.sm,
   },
-  emoji: {
-    fontSize: 20,
+  labelIcon: {
     marginRight: theme.spacing.xs,
   },
   label: {
@@ -105,15 +109,6 @@ const styles = StyleSheet.create({
   },
   buttonDisabled: {
     backgroundColor: theme.colors.border,
-  },
-  buttonText: {
-    fontSize: 24,
-    fontWeight: theme.typography.weights.bold,
-    color: theme.colors.textOnPrimary,
-    lineHeight: 28,
-  },
-  buttonTextDisabled: {
-    color: theme.colors.textLight,
   },
   valueContainer: {
     alignItems: 'center',

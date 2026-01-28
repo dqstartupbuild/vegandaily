@@ -3,10 +3,11 @@
 
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { theme } from '../theme';
 
 interface EmptyStateProps {
-    emoji: string;
+    iconName: keyof typeof Ionicons.glyphMap;
     title: string;
     message: string;
 }
@@ -14,10 +15,10 @@ interface EmptyStateProps {
 /**
  * Empty state display for empty lists
  */
-export const EmptyState: React.FC<EmptyStateProps> = ({ emoji, title, message }) => {
+export const EmptyState: React.FC<EmptyStateProps> = ({ iconName, title, message }) => {
     return (
         <View style={styles.container}>
-            <Text style={styles.emoji}>{emoji}</Text>
+            <Ionicons name={iconName} size={64} color={theme.colors.textLight} style={styles.icon} />
             <Text style={styles.title}>{title}</Text>
             <Text style={styles.message}>{message}</Text>
         </View>
@@ -31,8 +32,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         padding: theme.spacing.xl,
     },
-    emoji: {
-        fontSize: 64,
+    icon: {
         marginBottom: theme.spacing.md,
     },
     title: {

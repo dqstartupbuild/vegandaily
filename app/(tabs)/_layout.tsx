@@ -1,5 +1,6 @@
 import { Tabs } from 'expo-router';
 import { theme } from '../../src/theme';
+import { Ionicons } from '@expo/vector-icons';
 
 /**
  * Tab layout for main navigation
@@ -38,7 +39,7 @@ export default function TabLayout() {
                     title: 'Home',
                     headerShown: false,
                     tabBarIcon: ({ focused }) => (
-                        <TabIcon emoji="🏠" focused={focused} />
+                        <TabIcon name={focused ? 'home' : 'home-outline'} focused={focused} />
                     ),
                 }}
             />
@@ -48,7 +49,7 @@ export default function TabLayout() {
                     title: 'Browse',
                     headerShown: false,
                     tabBarIcon: ({ focused }) => (
-                        <TabIcon emoji="📖" focused={focused} />
+                        <TabIcon name={focused ? 'search' : 'search-outline'} focused={focused} />
                     ),
                 }}
             />
@@ -58,7 +59,7 @@ export default function TabLayout() {
                     title: 'Bookmarks',
                     headerShown: false,
                     tabBarIcon: ({ focused }) => (
-                        <TabIcon emoji="🔖" focused={focused} />
+                        <TabIcon name={focused ? 'bookmark' : 'bookmark-outline'} focused={focused} />
                     ),
                 }}
             />
@@ -67,16 +68,20 @@ export default function TabLayout() {
 }
 
 // Simple tab icon component
-import { Text, View, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 interface TabIconProps {
-    emoji: string;
+    name: keyof typeof Ionicons.glyphMap;
     focused: boolean;
 }
 
-const TabIcon: React.FC<TabIconProps> = ({ emoji, focused }) => (
+const TabIcon: React.FC<TabIconProps> = ({ name, focused }) => (
     <View style={[styles.iconContainer, focused && styles.iconFocused]}>
-        <Text style={styles.icon}>{emoji}</Text>
+        <Ionicons 
+            name={name} 
+            size={24} 
+            color={focused ? theme.colors.primary : theme.colors.textLight} 
+        />
     </View>
 );
 
@@ -87,8 +92,5 @@ const styles = StyleSheet.create({
     },
     iconFocused: {
         backgroundColor: theme.colors.surfaceElevated,
-    },
-    icon: {
-        fontSize: 22,
     },
 });

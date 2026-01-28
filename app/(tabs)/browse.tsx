@@ -87,7 +87,7 @@ export default function BrowseScreen() {
                 />
             ) : (
                 <EmptyState
-                    emoji="🔍"
+                    iconName="search-outline"
                     title="No recipes found"
                     message={
                         searchQuery

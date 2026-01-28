@@ -1,5 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet, View } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../theme';
 import { MealType } from '../types';
 
@@ -10,32 +11,32 @@ interface MealButtonProps {
 
 const mealConfig = {
   breakfast: {
-    emoji: '🌅',
+    iconName: 'coffee-outline' as const,
     label: 'Breakfast',
     color: theme.colors.secondary,
   },
   lunch: {
-    emoji: '☀️',
+    iconName: 'white-balance-sunny' as const,
     label: 'Lunch',
     color: theme.colors.primaryLight,
   },
   dinner: {
-    emoji: '🌙',
+    iconName: 'weather-night' as const,
     label: 'Dinner',
     color: theme.colors.primary,
   },
   dessert: {
-    emoji: '🍪',
+    iconName: 'cookie-outline' as const,
     label: 'Dessert',
     color: theme.colors.secondaryDark,
   },
   snack: {
-    emoji: '🍿',
+    iconName: 'popcorn' as const,
     label: 'Snack',
     color: theme.colors.secondary,
   },
   bread: {
-    emoji: '🍞',
+    iconName: 'bread-slice' as const,
     label: 'Bread',
     color: theme.colors.secondaryLight,
   },
@@ -54,7 +55,12 @@ export const MealButton: React.FC<MealButtonProps> = ({ mealType, onPress }) => 
       activeOpacity={0.8}
     >
       <View style={styles.content}>
-        <Text style={styles.emoji}>{config.emoji}</Text>
+        <MaterialCommunityIcons 
+          name={config.iconName} 
+          size={48} 
+          color={theme.colors.textOnPrimary} 
+          style={styles.icon}
+        />
         <Text style={styles.label}>{config.label}</Text>
         <Text style={styles.hint}>Tap to view today's recipe</Text>
       </View>
@@ -73,8 +79,7 @@ const styles = StyleSheet.create({
   content: {
     alignItems: 'center',
   },
-  emoji: {
-    fontSize: 48,
+  icon: {
     marginBottom: theme.spacing.sm,
   },
   label: {

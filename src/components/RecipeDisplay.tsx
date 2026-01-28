@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, ScrollView, StyleSheet, Image } from 'react-native';
+import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 import { theme } from '../theme';
 import { Recipe } from '../types';
 import { formatAmount } from '../utils/formatAmount';
@@ -41,12 +42,12 @@ export const RecipeDisplay: React.FC<RecipeDisplayProps> = ({ recipe }) => {
         {/* Time and Servings Info */}
         <View style={styles.metaContainer}>
           <View style={styles.metaItem}>
-            <Text style={styles.metaEmoji}>⏱️</Text>
+            <Ionicons name="time-outline" size={24} color={theme.colors.primary} style={styles.metaIcon} />
             <Text style={styles.metaLabel}>Prep</Text>
             <Text style={styles.metaValue}>{recipe.prepTime} min</Text>
           </View>
           <View style={styles.metaItem}>
-            <Text style={styles.metaEmoji}>🍳</Text>
+            <MaterialCommunityIcons name="stove" size={24} color={theme.colors.primary} style={styles.metaIcon} />
             <Text style={styles.metaLabel}>Cook</Text>
             <Text style={styles.metaValue}>{recipe.cookTime} min</Text>
           </View>
@@ -65,7 +66,10 @@ export const RecipeDisplay: React.FC<RecipeDisplayProps> = ({ recipe }) => {
 
       {/* Ingredients Section */}
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>🥕 Ingredients</Text>
+        <View style={styles.sectionTitleRow}>
+          <MaterialCommunityIcons name="sprout" size={22} color={theme.colors.primary} />
+          <Text style={styles.sectionTitle}>Ingredients</Text>
+        </View>
         <View style={styles.ingredientsList}>
           {recipe.ingredients.map((ingredient, index) => (
             <View key={index} style={styles.ingredientItem}>
@@ -86,7 +90,10 @@ export const RecipeDisplay: React.FC<RecipeDisplayProps> = ({ recipe }) => {
 
       {/* Instructions Section */}
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>📝 Instructions</Text>
+        <View style={styles.sectionTitleRow}>
+          <Ionicons name="list" size={22} color={theme.colors.primary} />
+          <Text style={styles.sectionTitle}>Instructions</Text>
+        </View>
         <View style={styles.instructionsList}>
           {recipe.instructions.map((instruction, index) => (
             <View key={index} style={styles.instructionItem}>
@@ -102,7 +109,10 @@ export const RecipeDisplay: React.FC<RecipeDisplayProps> = ({ recipe }) => {
       {/* Nutrition Info (if available) */}
       {recipe.nutritionPerServing && (
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>📊 Nutrition per Serving</Text>
+          <View style={styles.sectionTitleRow}>
+            <Ionicons name="stats-chart" size={22} color={theme.colors.primary} />
+            <Text style={styles.sectionTitle}>Nutrition per Serving</Text>
+          </View>
           <View style={styles.nutritionGrid}>
             <NutritionItem label="Calories" value={recipe.nutritionPerServing.calories} unit="kcal" />
             <NutritionItem label="Protein" value={recipe.nutritionPerServing.protein} unit="g" />
@@ -178,7 +188,7 @@ const styles = StyleSheet.create({
     padding: theme.spacing.md,
   },
   metaItem: { alignItems: 'center' },
-  metaEmoji: { fontSize: 24, marginBottom: theme.spacing.xs },
+  metaIcon: { marginBottom: theme.spacing.xs },
   metaLabel: { fontSize: theme.typography.sizes.sm, color: theme.colors.textLight },
   metaValue: {
     fontSize: theme.typography.sizes.md,
@@ -194,11 +204,16 @@ const styles = StyleSheet.create({
     padding: theme.spacing.lg,
     marginTop: theme.spacing.sm,
   },
+  sectionTitleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: theme.spacing.sm,
+    marginBottom: theme.spacing.md,
+  },
   sectionTitle: {
     fontSize: theme.typography.sizes.lg,
     fontWeight: theme.typography.weights.bold,
     color: theme.colors.text,
-    marginBottom: theme.spacing.md,
   },
   ingredientsList: { gap: theme.spacing.sm },
   ingredientItem: { flexDirection: 'row', alignItems: 'flex-start' },

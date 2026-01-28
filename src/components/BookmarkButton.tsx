@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet, Animated } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { theme } from '../theme';
 import { useBookmarks } from '../context/BookmarkContext';
 
@@ -28,7 +29,11 @@ export const BookmarkButton: React.FC<BookmarkButtonProps> = ({
     if (variant === 'icon') {
         return (
             <TouchableOpacity onPress={handlePress} activeOpacity={0.7} style={styles.iconButton}>
-                <Text style={styles.headerIcon}>{bookmarked ? '🔖' : '📑'}</Text>
+                <Ionicons 
+                    name={bookmarked ? "bookmark" : "bookmark-outline"} 
+                    size={24} 
+                    color={theme.colors.textOnPrimary} 
+                />
             </TouchableOpacity>
         );
     }
@@ -39,7 +44,11 @@ export const BookmarkButton: React.FC<BookmarkButtonProps> = ({
             onPress={handlePress}
             activeOpacity={0.85}
         >
-            <Text style={styles.icon}>{bookmarked ? '🔖' : '📑'}</Text>
+            <Ionicons 
+                name={bookmarked ? "bookmark" : "bookmark-outline"} 
+                size={20} 
+                color={bookmarked ? theme.colors.textOnPrimary : theme.colors.text} 
+            />
             <Text style={[styles.label, bookmarked && styles.labelActive]}>
                 {bookmarked ? 'Saved' : 'Save'}
             </Text>
@@ -68,12 +77,7 @@ const styles = StyleSheet.create({
     iconButton: {
         padding: 8,
     },
-    headerIcon: {
-        fontSize: 24,
-    },
-    icon: {
-        fontSize: 20,
-    },
+    // headerIcon and icon styles removed as size is passed via props
     label: {
         fontSize: theme.typography.sizes.md,
         fontWeight: theme.typography.weights.semibold,
