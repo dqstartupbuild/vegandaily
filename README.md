@@ -41,23 +41,28 @@ Vegan Daily is a simple, no-account-required mobile app that helps users discove
 | Feature | Description |
 |---------|-------------|
 | **Daily Meal Suggestions** | One breakfast, lunch, and dinner recipe per day |
+| **Browse & Discover** | Search and filter through the entire recipe library |
+| **Bookmarks** | Save your favorite recipes locally on your device |
 | **Adjustable Servings** | Scale ingredient amounts with +/- buttons |
 | **No Account Required** | Privacy-first, no sign-up needed |
-| **No Browsing** | Curated daily selection, not an overwhelming library |
 | **Offline-Ready** | All recipes bundled in the app |
 
 ### User Flow
 
 ```mermaid
 flowchart TD
-    A[Open App] --> B[Home Screen]
-    B --> C{Select Meal Type}
-    C -->|Breakfast| D[Show Breakfast Recipe]
-    C -->|Lunch| E[Show Lunch Recipe]
-    C -->|Dinner| F[Show Dinner Recipe]
-    D --> B
-    E --> B
-    F --> B
+    A[Open App] --> B[Home Tab]
+    A --> G[Browse Tab]
+    A --> H[Bookmarks Tab]
+    B --> C{Select Meal}
+    C -->|Daily Recipe| D[Recipe Display]
+    G --> I[Search/Filter]
+    I --> J[Recipe Card]
+    J --> D
+    H --> K[Saved Recipes]
+    K --> D
+    D --> L[Bookmark Toggle]
+    L --> H
 ```
 
 ---
@@ -391,10 +396,13 @@ export const commonIngredients = {
 - [ ] Cooking timer
 - [ ] Dark mode support
 
-### Phase 3: Growth (Future)
-- [ ] Seasonal recipe suggestions
-- [ ] Shopping list generation
-- [ ] Recipe favorites (local storage)
+### Phase 3: Community & Social (Future)
+- [ ] Recipe ratings (1-5 stars)
+- [ ] User comments
+- [ ] Cross-device syncing (Backend required)
+- [ ] Community recipe submissions
+- [ ] Recipe images (dynamic loading)
+- [ ] RevenueCat integration (Paywall for Browse/Bookmarks)
 
 ---
 

@@ -23,6 +23,21 @@ export const getRecipesByMealType = (mealType: MealType): Recipe[] => {
 };
 
 /**
+ * Get all recipes as a flat array
+ */
+export const getAllRecipesList = (): Recipe[] => {
+    return [...breakfastRecipes, ...lunchRecipes, ...dinnerRecipes];
+};
+
+/**
+ * Get a recipe by its ID
+ */
+export const getRecipeById = (id: string): Recipe | undefined => {
+    const allRecipesList = getAllRecipesList();
+    return allRecipesList.find((recipe) => recipe.id === id);
+};
+
+/**
  * Get total recipe count across all meal types
  */
 export const getTotalRecipeCount = (): number => {

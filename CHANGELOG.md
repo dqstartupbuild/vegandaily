@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.2.0] - 2026-01-27
+
+### Added
+- **Browse Tab**: Full recipe discovery with searching and filtering
+  - Search by recipe name, description, tags, or ingredients
+  - Filter by meal type (Breakfast, Lunch, Dinner)
+- **Bookmarks Feature**: Save recipes for quick access
+  - Persistent local storage using AsyncStorage
+  - `BookmarkProvider` context for app-wide bookmark state
+  - Bookmark toggle in both daily and detail recipe views
+- **Navigation Overhaul**: Switched to tab-based navigation
+  - New Home, Browse, and Bookmarks tabs
+  - Updated path structure for dynamic recipe routing
+- **New Components**:
+  - `RecipeCard`: Compact preview for list views
+  - `SearchBar`: Styled search input with clear function
+  - `FilterChips`: Horizontal scrollable meal type filters
+  - `BookmarkButton`: Floating action button for recipe detail
+  - `EmptyState`: Placeholder for empty browse/bookmark lists
+
+---
+
 ## [1.1.0] - 2026-01-27
 
 ### Added
