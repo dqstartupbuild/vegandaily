@@ -3,7 +3,7 @@
 /**
  * Represents a meal type category
  */
-export type MealType = 'breakfast' | 'lunch' | 'dinner';
+export type MealType = 'breakfast' | 'lunch' | 'dinner' | 'dessert' | 'snack' | 'bread';
 
 /**
  * Represents a single ingredient in a recipe
@@ -56,4 +56,7 @@ export interface RecipeCollection {
   breakfast: Recipe[];
   lunch: Recipe[];
   dinner: Recipe[];
+  dessert: Recipe[];
+  snack: Recipe[];
+  bread: Recipe[];
 }

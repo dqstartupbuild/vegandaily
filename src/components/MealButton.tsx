@@ -24,6 +24,21 @@ const mealConfig = {
     label: 'Dinner',
     color: theme.colors.primary,
   },
+  dessert: {
+    emoji: '🍪',
+    label: 'Dessert',
+    color: theme.colors.secondaryDark,
+  },
+  snack: {
+    emoji: '🍿',
+    label: 'Snack',
+    color: theme.colors.secondary,
+  },
+  bread: {
+    emoji: '🍞',
+    label: 'Bread',
+    color: theme.colors.secondaryLight,
+  },
 };
 
 /**

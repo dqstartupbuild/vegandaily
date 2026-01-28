@@ -24,6 +24,9 @@ const chips: ChipConfig[] = [
     { key: 'breakfast', label: 'Breakfast', emoji: '🌅' },
     { key: 'lunch', label: 'Lunch', emoji: '☀️' },
     { key: 'dinner', label: 'Dinner', emoji: '🌙' },
+    { key: 'dessert', label: 'Dessert', emoji: '🍪' },
+    { key: 'snack', label: 'Snack', emoji: '🍿' },
+    { key: 'bread', label: 'Bread', emoji: '🍞' },
 ];
 
 /**

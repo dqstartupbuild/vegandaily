@@ -1,0 +1,34 @@
+import { Recipe } from '../../../types';
+
+export const curriedChickpeasToast: Recipe = {
+    id: 'curried-chickpeas-toast',
+    name: 'Curried Chickpeas on Toast',
+    description: 'Savory, spicy chickpeas with caramelized onions on toasted sourdough.',
+    image: require('../../../../assets/recipes/chickpeas-toast.png'),
+    mealType: 'breakfast',
+    prepTime: 10,
+    cookTime: 15,
+    servings: 2,
+    difficulty: 'easy',
+    ingredients: [
+        { name: 'Red onion', amount: 1, unit: 'medium' },
+        { name: 'Mango chutney', amount: 1, unit: 'tbs' },
+        { name: 'Chickpeas (400g can)', amount: 1, unit: 'can' },
+        { name: 'Curry powder', amount: 1, unit: 'tsp' },
+        { name: 'Paprika', amount: 1, unit: 'tsp' },
+        { name: 'Mustard seeds', amount: 1, unit: 'tsp' },
+        { name: 'Fresh spinach', amount: 1, unit: 'handful' },
+        { name: 'Sourdough bread', amount: 2, unit: 'slices' },
+        { name: 'Vegan butter', amount: 1, unit: 'tbs' },
+    ],
+    instructions: [
+        'Sauté sliced onion. Add salt and mango chutney. Caramelize for 5 mins.',
+        'Mash chickpeas slightly. Season with curry powder and paprika.',
+        'Fry mustard seeds until popping. Add chickpeas and fry until golden.',
+        'Push aside, wilt spinach with lemon juice.',
+        'Toast bread, butter it.',
+        'Layer onions, chickpeas, and spinach on toast.',
+        'Garnish with coriander and chili flakes.',
+    ],
+    tags: ['breakfast', 'toast', 'savory', 'spicy'],
+};

@@ -10,6 +10,9 @@ const mealLabels: Record<MealType, string> = {
     breakfast: 'Breakfast',
     lunch: 'Lunch',
     dinner: 'Dinner',
+    dessert: 'Dessert',
+    snack: 'Snack',
+    bread: 'Bread',
 };
 
 /**
@@ -20,7 +23,12 @@ export default function RecipeScreen() {
 
     // Validate meal type
     const validMealType: MealType =
-        mealType === 'breakfast' || mealType === 'lunch' || mealType === 'dinner'
+        mealType === 'breakfast' ||
+        mealType === 'lunch' ||
+        mealType === 'dinner' ||
+        mealType === 'dessert' ||
+        mealType === 'snack' ||
+        mealType === 'bread'
             ? mealType
             : 'breakfast';
 

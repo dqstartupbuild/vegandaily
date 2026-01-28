@@ -36,6 +36,14 @@ export default function HomeScreen() {
                     mealType="dinner"
                     onPress={() => handleMealPress('dinner')}
                 />
+                <MealButton
+                    mealType="dessert"
+                    onPress={() => handleMealPress('dessert')}
+                />
+                <MealButton
+                    mealType="snack"
+                    onPress={() => handleMealPress('snack')}
+                />
             </ScrollView>
         </View>
     );

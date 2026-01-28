@@ -5,6 +5,9 @@ import { Recipe, MealType, RecipeCollection } from '../../types';
 import { breakfastRecipes } from './breakfast';
 import { lunchRecipes } from './lunch';
 import { dinnerRecipes } from './dinner';
+import { dessertRecipes } from './dessert';
+import { snackRecipes } from './snack';
+import { breadRecipes } from './bread';
 
 /**
  * All recipes organized by meal type
@@ -13,6 +16,9 @@ export const allRecipes: RecipeCollection = {
     breakfast: breakfastRecipes,
     lunch: lunchRecipes,
     dinner: dinnerRecipes,
+    dessert: dessertRecipes,
+    snack: snackRecipes,
+    bread: breadRecipes,
 };
 
 /**
@@ -26,7 +32,14 @@ export const getRecipesByMealType = (mealType: MealType): Recipe[] => {
  * Get all recipes as a flat array
  */
 export const getAllRecipesList = (): Recipe[] => {
-    return [...breakfastRecipes, ...lunchRecipes, ...dinnerRecipes];
+    return [
+        ...breakfastRecipes,
+        ...lunchRecipes,
+        ...dinnerRecipes,
+        ...dessertRecipes,
+        ...snackRecipes,
+        ...breadRecipes,
+    ];
 };
 
 /**
@@ -41,8 +54,15 @@ export const getRecipeById = (id: string): Recipe | undefined => {
  * Get total recipe count across all meal types
  */
 export const getTotalRecipeCount = (): number => {
-    return breakfastRecipes.length + lunchRecipes.length + dinnerRecipes.length;
+    return (
+        breakfastRecipes.length +
+        lunchRecipes.length +
+        dinnerRecipes.length +
+        dessertRecipes.length +
+        snackRecipes.length +
+        breadRecipes.length
+    );
 };
 
 // Re-export for convenience
-export { breakfastRecipes, lunchRecipes, dinnerRecipes };
+export { breakfastRecipes, lunchRecipes, dinnerRecipes, dessertRecipes, snackRecipes, breadRecipes };

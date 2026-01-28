@@ -1,0 +1,38 @@
+import { Recipe } from '../../../types';
+
+export const blackBeanBrownies: Recipe = {
+    id: 'black-bean-brownies',
+    name: 'Fudgy Black Bean Brownies',
+    description: 'Rich, fudgy gluten-free brownies made with black beans - you won\'t taste the beans!',
+    image: require('../../../../assets/recipes/black-bean-brownies.png'),
+    mealType: 'dessert',
+    prepTime: 15,
+    cookTime: 30,
+    servings: 9,
+    difficulty: 'easy',
+    ingredients: [
+        { name: 'Black beans (15oz can)', amount: 1, unit: 'can' },
+        { name: 'Almond butter', amount: 0.5, unit: 'cup' },
+        { name: 'Almond flour', amount: 0.25, unit: 'cup' },
+        { name: 'Cocoa powder', amount: 0.25, unit: 'cup' },
+        { name: 'Maple syrup', amount: 0.5, unit: 'cup' },
+        { name: 'Vanilla extract', amount: 1.5, unit: 'tsp' },
+        { name: 'Baking powder', amount: 0.25, unit: 'tsp' },
+        { name: 'Baking soda', amount: 0.25, unit: 'tsp' },
+        { name: 'Flax meal', amount: 1, unit: 'tbs' },
+        { name: 'Water', amount: 3, unit: 'tbs' },
+        { name: 'Dark vegan chocolate', amount: 0.75, unit: 'cup' },
+        { name: 'Vegan mini chocolate chips', amount: 3, unit: 'tbs' },
+    ],
+    instructions: [
+        'Preheat oven to 350°F (175°C). Line 8x8 baking dish with parchment.',
+        'Make flax egg: 1 tbs flax meal + 3 tbs water. Let thicken.',
+        'Rinse and drain black beans thoroughly.',
+        'In a food processor, blend beans, flax egg, almond butter, flour, cocoa, maple syrup, vanilla, baking powder, and soda until completely smooth.',
+        'Fold in chopped chocolate by hand.',
+        'Pour into pan, smooth top, and sprinkle with mini chips.',
+        'Bake 25-30 minutes until set. Edges should pull away slightly.',
+        'Cool completely in pan before slicing (crucial for texture).',
+    ],
+    tags: ['dessert', 'brownies', 'gluten-free', 'healthy'],
+};

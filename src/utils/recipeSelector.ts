@@ -28,6 +28,9 @@ export const getAllDailyRecipes = (): Record<MealType, Recipe> => {
         breakfast: getDailyRecipe('breakfast'),
         lunch: getDailyRecipe('lunch'),
         dinner: getDailyRecipe('dinner'),
+        dessert: getDailyRecipe('dessert'),
+        snack: getDailyRecipe('snack'),
+        bread: getDailyRecipe('bread'),
     };
 };
 

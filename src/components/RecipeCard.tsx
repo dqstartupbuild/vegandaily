@@ -16,6 +16,9 @@ const mealEmojis: Record<MealType, string> = {
     breakfast: '🌅',
     lunch: '☀️',
     dinner: '🌙',
+    dessert: '🍪',
+    snack: '🍿',
+    bread: '🍞',
 };
 
 const difficultyColors = {

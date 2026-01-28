@@ -1,0 +1,42 @@
+import { Recipe } from '../../../types';
+
+export const matchaCookies: Recipe = {
+    id: 'matcha-cookies',
+    name: 'Matcha Chocolate Chip Gem Cookies',
+    description: 'Soft and chewy vegan matcha cookies studded with white and dark chocolate chips and colorful chocolate gems.',
+    image: require('../../../../assets/recipes/matcha-cookies.png'),
+    mealType: 'dessert',
+    prepTime: 20,
+    cookTime: 12,
+    servings: 12,
+    difficulty: 'medium',
+    ingredients: [
+        { name: 'All-purpose flour', amount: 2.125, unit: 'cups' }, // 2 cups + 2 tbs ~= 2.125
+        { name: 'Matcha powder', amount: 2, unit: 'tbs' },
+        { name: 'Baking soda', amount: 1, unit: 'tsp' },
+        { name: 'Baking powder', amount: 1, unit: 'tsp' },
+        { name: 'Salt', amount: 0.5, unit: 'tsp' },
+        { name: 'Light brown sugar', amount: 1, unit: 'cup' },
+        { name: 'Granulated monk fruit sweetener', amount: 0.5, unit: 'cup' },
+        { name: 'Vegan butter, melted', amount: 1, unit: 'cup' },
+        { name: 'Vanilla bean paste', amount: 1, unit: 'tsp' },
+        { name: 'Flax meal', amount: 2, unit: 'tbs' },
+        { name: 'Water', amount: 5, unit: 'tbs' },
+        { name: 'Vegan white chocolate chips', amount: 0.5, unit: 'cup' },
+        { name: 'Vegan semi-sweet or dark chocolate chips', amount: 0.5, unit: 'cup' },
+        { name: 'Unreal Gem candies', amount: 0.33, unit: 'cup' },
+    ],
+    instructions: [
+        'Preheat oven to 350°F (175°C) and line a baking sheet with parchment paper.',
+        'Mix 2 tbs flax meal with 5 tbs water in a small bowl. Let sit for 5 minutes to thicken.',
+        'In a large bowl, whisk together flour, matcha powder, baking soda, baking powder, and salt.',
+        'In a separate bowl, mix brown sugar, monk fruit sweetener, melted vegan butter, and vanilla paste.',
+        'Add the flax eggs to the wet ingredients and mix thoroughly.',
+        'Gradually add dry ingredients to wet ingredients until a dough forms.',
+        'Fold in white chocolate chips, dark chocolate chips, and candy gems.',
+        'Scoop tablespoon-sized amounts onto the baking sheet, spaced 2 inches apart.',
+        'Bake for 10-12 minutes until edges are lightly golden.',
+        'Cool on baking sheet for a few minutes before transferring to a wire rack.',
+    ],
+    tags: ['dessert', 'cookies', 'matcha', 'chocolate'],
+};
