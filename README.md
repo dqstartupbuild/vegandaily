@@ -41,6 +41,7 @@ EasyVegan is a simple, no-account-required mobile app that helps users discover 
 | Feature | Description |
 |---------|-------------|
 | **Daily Meal Suggestions** | One breakfast, lunch, and dinner recipe per day |
+| **Adjustable Servings** | Scale ingredient amounts with +/- buttons |
 | **No Account Required** | Privacy-first, no sign-up needed |
 | **No Browsing** | Curated daily selection, not an overwhelming library |
 | **Offline-Ready** | All recipes bundled in the app |
@@ -96,8 +97,8 @@ easyvegan/
 │   ├── components/              # Reusable UI components
 │   │   ├── Header.tsx           # App header
 │   │   ├── MealButton.tsx       # Meal selection button
-│   │   ├── MealCard.tsx         # Recipe card display
-│   │   └── RecipeDisplay.tsx    # Full recipe view
+│   │   ├── RecipeDisplay.tsx    # Full recipe view
+│   │   └── ServingsAdjuster.tsx # +/- buttons for servings
 │   ├── data/                    # Recipe & ingredient data
 │   │   ├── recipes/
 │   │   │   ├── breakfast/       # Breakfast recipes
@@ -109,7 +110,8 @@ easyvegan/
 │   │   └── index.ts             # Type exports
 │   ├── utils/                   # Helper functions
 │   │   ├── recipeSelector.ts    # Daily recipe selection logic
-│   │   └── dateUtils.ts         # Date helper functions
+│   │   ├── dateUtils.ts         # Date helper functions
+│   │   └── formatAmount.ts      # Decimal to fraction formatting
 │   └── theme/                   # Styling constants
 │       └── index.ts             # Colors, spacing, typography
 ├── package.json
@@ -383,9 +385,10 @@ export const commonIngredients = {
 - [x] Recipe display screen
 
 ### Phase 2: Enhancement (Planned)
+- [x] Adjustable servings with dynamic ingredient scaling
+- [x] Fraction formatting for ingredient amounts (1/2 instead of 0.5)
 - [ ] Recipe images
 - [ ] Cooking timer
-- [ ] Nutritional information display
 - [ ] Dark mode support
 
 ### Phase 3: Growth (Future)
@@ -402,6 +405,11 @@ export const commonIngredients = {
 - Three starter recipes (breakfast, lunch, dinner)
 - Daily meal suggestion system
 - Documentation established
+
+### v1.1.0
+- Added servings adjuster with +/- buttons
+- Ingredient amounts scale dynamically based on servings
+- Amounts now display as fractions (1/2, 1/4, etc.) instead of decimals
 
 ---
 

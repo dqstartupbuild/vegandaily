@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import { theme } from '../theme';
 import { Recipe } from '../types';
 import { formatAmount } from '../utils/formatAmount';
+import { ServingsAdjuster } from './ServingsAdjuster';
 
 interface RecipeDisplayProps {
   recipe: Recipe;
@@ -12,6 +13,19 @@ interface RecipeDisplayProps {
  * Full recipe display component with ingredients and instructions
  */
 export const RecipeDisplay: React.FC<RecipeDisplayProps> = ({ recipe }) => {
+  const [servings, setServings] = useState(recipe.servings);
+
+  // Calculate the multiplier for ingredient amounts
+  const servingsMultiplier = servings / recipe.servings;
+
+  const handleIncrease = () => setServings((s) => Math.min(s + 1, 20));
+  const handleDecrease = () => setServings((s) => Math.max(s - 1, 1));
+
+  // Calculate adjusted ingredient amount
+  const getAdjustedAmount = (originalAmount: number): number => {
+    return originalAmount * servingsMultiplier;
+  };
+
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       {/* Recipe Header */}
@@ -31,12 +45,17 @@ export const RecipeDisplay: React.FC<RecipeDisplayProps> = ({ recipe }) => {
             <Text style={styles.metaLabel}>Cook</Text>
             <Text style={styles.metaValue}>{recipe.cookTime} min</Text>
           </View>
-          <View style={styles.metaItem}>
-            <Text style={styles.metaEmoji}>🍽️</Text>
-            <Text style={styles.metaLabel}>Servings</Text>
-            <Text style={styles.metaValue}>{recipe.servings}</Text>
-          </View>
         </View>
+      </View>
+
+      {/* Servings Adjuster */}
+      <View style={styles.servingsSection}>
+        <ServingsAdjuster
+          currentServings={servings}
+          originalServings={recipe.servings}
+          onIncrease={handleIncrease}
+          onDecrease={handleDecrease}
+        />
       </View>
 
       {/* Ingredients Section */}
@@ -48,7 +67,7 @@ export const RecipeDisplay: React.FC<RecipeDisplayProps> = ({ recipe }) => {
               <Text style={styles.ingredientBullet}>•</Text>
               <Text style={styles.ingredientText}>
                 <Text style={styles.ingredientAmount}>
-                  {formatAmount(ingredient.amount)} {ingredient.unit}
+                  {formatAmount(getAdjustedAmount(ingredient.amount))} {ingredient.unit}
                 </Text>{' '}
                 {ingredient.name}
                 {ingredient.optional && (
@@ -80,26 +99,10 @@ export const RecipeDisplay: React.FC<RecipeDisplayProps> = ({ recipe }) => {
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>📊 Nutrition per Serving</Text>
           <View style={styles.nutritionGrid}>
-            <NutritionItem
-              label="Calories"
-              value={recipe.nutritionPerServing.calories}
-              unit="kcal"
-            />
-            <NutritionItem
-              label="Protein"
-              value={recipe.nutritionPerServing.protein}
-              unit="g"
-            />
-            <NutritionItem
-              label="Carbs"
-              value={recipe.nutritionPerServing.carbs}
-              unit="g"
-            />
-            <NutritionItem
-              label="Fat"
-              value={recipe.nutritionPerServing.fat}
-              unit="g"
-            />
+            <NutritionItem label="Calories" value={recipe.nutritionPerServing.calories} unit="kcal" />
+            <NutritionItem label="Protein" value={recipe.nutritionPerServing.protein} unit="g" />
+            <NutritionItem label="Carbs" value={recipe.nutritionPerServing.carbs} unit="g" />
+            <NutritionItem label="Fat" value={recipe.nutritionPerServing.fat} unit="g" />
           </View>
         </View>
       )}
@@ -121,11 +124,11 @@ export const RecipeDisplay: React.FC<RecipeDisplayProps> = ({ recipe }) => {
 };
 
 // Nutrition item helper component
-const NutritionItem: React.FC<{
-  label: string;
-  value: number;
-  unit: string;
-}> = ({ label, value, unit }) => (
+const NutritionItem: React.FC<{ label: string; value: number; unit: string }> = ({
+  label,
+  value,
+  unit,
+}) => (
   <View style={styles.nutritionItem}>
     <Text style={styles.nutritionValue}>
       {value}
@@ -165,21 +168,17 @@ const styles = StyleSheet.create({
     borderRadius: theme.borderRadius.md,
     padding: theme.spacing.md,
   },
-  metaItem: {
-    alignItems: 'center',
-  },
-  metaEmoji: {
-    fontSize: 24,
-    marginBottom: theme.spacing.xs,
-  },
-  metaLabel: {
-    fontSize: theme.typography.sizes.sm,
-    color: theme.colors.textLight,
-  },
+  metaItem: { alignItems: 'center' },
+  metaEmoji: { fontSize: 24, marginBottom: theme.spacing.xs },
+  metaLabel: { fontSize: theme.typography.sizes.sm, color: theme.colors.textLight },
   metaValue: {
     fontSize: theme.typography.sizes.md,
     fontWeight: theme.typography.weights.semibold,
     color: theme.colors.text,
+  },
+  servingsSection: {
+    padding: theme.spacing.md,
+    paddingTop: theme.spacing.sm,
   },
   section: {
     backgroundColor: theme.colors.surface,
@@ -192,13 +191,8 @@ const styles = StyleSheet.create({
     color: theme.colors.text,
     marginBottom: theme.spacing.md,
   },
-  ingredientsList: {
-    gap: theme.spacing.sm,
-  },
-  ingredientItem: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-  },
+  ingredientsList: { gap: theme.spacing.sm },
+  ingredientItem: { flexDirection: 'row', alignItems: 'flex-start' },
   ingredientBullet: {
     fontSize: theme.typography.sizes.md,
     color: theme.colors.primary,
@@ -211,20 +205,10 @@ const styles = StyleSheet.create({
     color: theme.colors.text,
     lineHeight: 22,
   },
-  ingredientAmount: {
-    fontWeight: theme.typography.weights.semibold,
-  },
-  optionalLabel: {
-    color: theme.colors.textLight,
-    fontStyle: 'italic',
-  },
-  instructionsList: {
-    gap: theme.spacing.md,
-  },
-  instructionItem: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-  },
+  ingredientAmount: { fontWeight: theme.typography.weights.semibold },
+  optionalLabel: { color: theme.colors.textLight, fontStyle: 'italic' },
+  instructionsList: { gap: theme.spacing.md },
+  instructionItem: { flexDirection: 'row', alignItems: 'flex-start' },
   stepNumber: {
     width: 28,
     height: 28,
@@ -245,22 +229,14 @@ const styles = StyleSheet.create({
     color: theme.colors.text,
     lineHeight: 24,
   },
-  nutritionGrid: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-  },
-  nutritionItem: {
-    alignItems: 'center',
-  },
+  nutritionGrid: { flexDirection: 'row', justifyContent: 'space-around' },
+  nutritionItem: { alignItems: 'center' },
   nutritionValue: {
     fontSize: theme.typography.sizes.lg,
     fontWeight: theme.typography.weights.bold,
     color: theme.colors.primary,
   },
-  nutritionUnit: {
-    fontSize: theme.typography.sizes.sm,
-    fontWeight: theme.typography.weights.regular,
-  },
+  nutritionUnit: { fontSize: theme.typography.sizes.sm, fontWeight: theme.typography.weights.regular },
   nutritionLabel: {
     fontSize: theme.typography.sizes.sm,
     color: theme.colors.textSecondary,
@@ -278,11 +254,6 @@ const styles = StyleSheet.create({
     paddingVertical: theme.spacing.xs,
     borderRadius: theme.borderRadius.full,
   },
-  tagText: {
-    fontSize: theme.typography.sizes.sm,
-    color: theme.colors.textSecondary,
-  },
-  bottomPadding: {
-    height: theme.spacing.xl,
-  },
+  tagText: { fontSize: theme.typography.sizes.sm, color: theme.colors.textSecondary },
+  bottomPadding: { height: theme.spacing.xl },
 });
