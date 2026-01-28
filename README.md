@@ -400,16 +400,7 @@ export const commonIngredients = {
 
 ## Changelog
 
-### v1.0.0 (Initial Release)
-- Initial app structure
-- Three starter recipes (breakfast, lunch, dinner)
-- Daily meal suggestion system
-- Documentation established
-
-### v1.1.0
-- Added servings adjuster with +/- buttons
-- Ingredient amounts scale dynamically based on servings
-- Amounts now display as fractions (1/2, 1/4, etc.) instead of decimals
+See [CHANGELOG.md](./CHANGELOG.md) for a detailed list of changes.
 
 ---
 
