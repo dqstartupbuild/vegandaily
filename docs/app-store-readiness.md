@@ -50,10 +50,10 @@ To build the production `.ipa` and `.aab` files, you need to initialize EAS (Exp
 
 ## 🟡 Remaining Tasks
 
-### 1. "About/Settings" Screen
-Add a settings icon to the Dashboard to display:
+### 1. "About/Settings" Screen ✅ - COMPLETED
+Added a settings icon to the Header to display:
 - App Version (1.0.0)
-- Buttons to view Privacy Policy & Terms of Service (linking to internal pages).
+- Buttons to view Support, Privacy Policy & Terms of Service.
 - "Made with ❤️ for Vegan Cooking"
 
 ---
@@ -65,7 +65,9 @@ Add a settings icon to the Dashboard to display:
 - [x] Compress `assets/recipes/` images.
 - [x] Optimize branding assets and splash screen logic.
 - [x] Host internal Privacy/Terms/Support on a public URL. (e.g., vegandaily.app/support)
+- [x] Implement "About/Settings" screen with legal links.
 - [ ] Run `npx expo run:ios --configuration Release` to verify production stability.
+- [x] Integrate `expo-constants` for versioning.
 - [ ] Generate screenshots for the App Store (6.5" and 5.5" for iOS).
 
 ---

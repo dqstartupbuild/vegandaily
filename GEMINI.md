@@ -18,6 +18,7 @@ The project follows a modular architecture with strict code-splitting rules.
 - `app/`: Expo Router pages.
   - `(tabs)/`: Main tab navigation (Home, Browse, Bookmarks).
   - `recipe/`: Dynamic recipe details and lists.
+  - `settings.tsx`, `support.tsx`: App information and user contact pages.
 - `src/components/`: UI components (PascalCase).
 - `src/data/recipes/`: Static recipe data organized by meal type.
 - `src/context/`: React Context providers for app-wide state.

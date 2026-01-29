@@ -22,6 +22,8 @@ vegandaily/
 │   ├── index.tsx
 │   ├── index.web.tsx
 │   ├── privacy.tsx
+│   ├── settings.tsx
+│   ├── support.tsx
 │   └── terms.tsx
 ├── app.json
 ├── assets

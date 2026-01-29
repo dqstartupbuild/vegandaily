@@ -5,6 +5,23 @@ All notable changes to Vegan Daily will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0] - 2026-01-29
+
+### Added
+- **Settings Screen**: New application settings page accessible via the dashboard.
+  - Displays application version dynamically using `expo-constants`.
+  - Added "Made with 💚 for Vegan Cooking" attribution.
+- **Support Page**: Dedicated support page mandated by Apple for App Store submission.
+  - Links to X (@dqstartupbuild) and email (support@followusai.com).
+  - Includes Frequently Asked Questions (FAQ) for quick user assistance.
+- **Header Navigation**: Integrated a settings icon (cog) in the global Header for easy access to the Settings screen.
+
+### Changed
+- **Footer Updates**: Added a "Support" link to the web landing page footer in the legal section.
+- **App Store Readiness**: Updated documentation and checklists for App Store submission status.
+
+---
+
 ## [1.3.1] - 2026-01-28
 
 ### Fixed

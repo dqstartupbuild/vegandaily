@@ -45,6 +45,7 @@ Vegan Daily is a simple, no-account-required mobile app that helps users discove
 | **Bookmarks** | Save your favorite recipes locally on your device |
 | **Adjustable Servings** | Scale ingredient amounts with +/- buttons |
 | **No Account Required** | Privacy-first, no sign-up needed |
+| **Settings & Support** | Access legal docs, contact support, and view app version |
 | **Offline-Ready** | All recipes bundled in the app |
 
 ### User Flow
@@ -111,6 +112,8 @@ vegandaily/
 │   ├── index.tsx (Mobile redirect)
 │   ├── index.web.tsx (Web landing page)
 │   ├── privacy.tsx
+│   ├── settings.tsx
+│   ├── support.tsx
 │   └── terms.tsx
 ├── app.json
 ├── assets
@@ -665,6 +668,7 @@ export const commonIngredients = {
 - [x] Adjustable servings with dynamic ingredient scaling
 - [x] Fraction formatting for ingredient amounts (1/2 instead of 0.5)
 - [x] Recipe images
+- [x] Settings screen with legal & support links
 - [ ] Cooking timer
 - [ ] Dark mode support
 
