@@ -5,6 +5,19 @@ All notable changes to Vegan Daily will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.1] - 2026-01-28
+
+### Fixed
+- **Splash Screen**: Resolved "target icon" placeholder issue on iOS/Android by optimizing app branding assets.
+  - Reduced `icon.png`, `splash-icon.png`, and `adaptive-icon.png` from 1.4MB to ~388KB (70% reduction).
+  - Resized branding assets to 512x512 for better compatibility.
+- **App Configuration**: Cleaned up `app.json` asset paths and added missing platform identifiers (`bundleIdentifier`, `package`).
+
+### Added
+- **Startup Management**: Integrated `expo-splash-screen` to manage the transition from splash to app, preventing initial flashes and ensuring theme colors are respected.
+
+---
+
 ## [1.3.0] - 2026-01-28
 
 ### Performance

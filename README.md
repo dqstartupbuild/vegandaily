@@ -77,6 +77,7 @@ flowchart TD
 | **Language** | TypeScript |
 | **Navigation** | Expo Router |
 | **State** | React Context (minimal) |
+| **Startup** | expo-splash-screen |
 | **Styling** | StyleSheet API |
 
 ### Design Principles

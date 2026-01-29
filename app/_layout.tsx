@@ -1,17 +1,32 @@
 import { Stack } from 'expo-router';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
+import * as SplashScreen from 'expo-splash-screen';
+import { useEffect } from 'react';
 import { theme } from '../src/theme';
 import { BookmarkProvider } from '../src/context/BookmarkContext';
 import { DailyRecipeProvider } from '../src/context/DailyRecipeContext';
+
+// Keep the splash screen visible while we fetch resources
+SplashScreen.preventAutoHideAsync();
 
 /**
  * Root layout for the Vegan Daily app
  * Sets up navigation, safe area context, and bookmark provider
  */
 export default function RootLayout() {
+    useEffect(() => {
+        // Hide splash screen after a short delay to ensure everything is rendered
+        const hideSplash = async () => {
+            await new Promise(resolve => setTimeout(resolve, 500));
+            await SplashScreen.hideAsync();
+        };
+        hideSplash();
+    }, []);
+
     return (
         <SafeAreaProvider>
+
             <BookmarkProvider>
                 <DailyRecipeProvider>
                     <StatusBar style="light" />
