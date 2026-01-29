@@ -25,7 +25,7 @@ The application is functionally complete and follows the core philosophy of a si
 
 ## 🔴 Critical "Must-Haves" for Shipping
 
-### 1. EAS Configuration (`eas.json`)
+### 1. EAS Configuration (`eas.json`) ✅ - COMPLETED
 To build the production `.ipa` and `.aab` files, you need to initialize EAS (Expo Application Services).
 - Run `eas build:configure` or create a manual `eas.json`.
 
@@ -66,7 +66,7 @@ Added a settings icon to the Header to display:
 - [x] Optimize branding assets and splash screen logic.
 - [x] Host internal Privacy/Terms/Support on a public URL. (e.g., vegandaily.app/support)
 - [x] Implement "About/Settings" screen with legal links.
-- [ ] Run `npx expo run:ios --configuration Release` to verify production stability.
+- [x] Run `npx expo run:ios --configuration Release` to verify production stability.
 - [x] Integrate `expo-constants` for versioning.
 - [ ] Generate screenshots for the App Store (6.5" and 5.5" for iOS).
 
