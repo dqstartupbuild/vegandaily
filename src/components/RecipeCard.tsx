@@ -10,7 +10,7 @@ import { useBookmarks } from '../context/BookmarkContext';
 
 interface RecipeCardProps {
     recipe: Recipe;
-    onPress: () => void;
+    onPress: (recipeId: string) => void;
 }
 
 const mealIcons: Record<MealType, keyof typeof MaterialCommunityIcons.glyphMap> = {
@@ -31,7 +31,7 @@ const difficultyColors = {
 /**
  * Compact recipe card for list views
  */
-export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, onPress }) => {
+export const RecipeCard: React.FC<RecipeCardProps> = React.memo(({ recipe, onPress }) => {
     const { isBookmarked, toggleBookmark } = useBookmarks();
     const bookmarked = isBookmarked(recipe.id);
 
@@ -42,7 +42,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, onPress }) => {
     const totalTime = recipe.prepTime + recipe.cookTime;
 
     return (
-        <TouchableOpacity style={styles.card} onPress={onPress} activeOpacity={0.85}>
+        <TouchableOpacity style={styles.card} onPress={() => onPress(recipe.id)} activeOpacity={0.85}>
             {/* Meal Type Badge or Image */}
             {recipe.image ? (
                 <Image source={recipe.image} style={styles.thumbnail} />
@@ -87,7 +87,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe, onPress }) => {
             </TouchableOpacity>
         </TouchableOpacity>
     );
-};
+});
 
 const styles = StyleSheet.create({
     card: {

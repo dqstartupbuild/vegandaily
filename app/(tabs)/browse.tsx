@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import { View, FlatList, StyleSheet, Text } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -48,13 +48,13 @@ export default function BrowseScreen() {
         return recipes;
     }, [allRecipes, filter, searchQuery]);
 
-    const handleRecipePress = (recipe: Recipe) => {
-        router.push(`/recipe/detail/${recipe.id}`);
-    };
+    const handleRecipePress = useCallback((recipeId: string) => {
+        router.push(`/recipe/detail/${recipeId}`);
+    }, [router]);
 
-    const renderRecipe = ({ item }: { item: Recipe }) => (
-        <RecipeCard recipe={item} onPress={() => handleRecipePress(item)} />
-    );
+    const renderRecipe = useCallback(({ item }: { item: Recipe }) => {
+        return <RecipeCard recipe={item} onPress={handleRecipePress} />;
+    }, [handleRecipePress]);
 
     return (
         <View style={[styles.container, { paddingTop: insets.top }]}>
