@@ -10,7 +10,7 @@ import { theme } from '../src/theme';
 export default function PrivacyPage() {
     return (
         <View style={styles.container}>
-            <Stack.Screen options={{ title: 'Privacy Policy', headerShown: true }} />
+            <Stack.Screen options={{ title: 'Privacy Policy', headerShown: true, headerBackTitle: 'Back' }} />
             <ScrollView contentContainerStyle={styles.content}>
                 <Text style={styles.title}>Privacy Policy</Text>
                 <Text style={styles.date}>Last Updated: January 28, 2026</Text>

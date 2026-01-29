@@ -10,7 +10,7 @@ import { theme } from '../src/theme';
 export default function TermsPage() {
     return (
         <View style={styles.container}>
-            <Stack.Screen options={{ title: 'Terms of Service', headerShown: true }} />
+            <Stack.Screen options={{ title: 'Terms of Service', headerShown: true, headerBackTitle: 'Back' }} />
             <ScrollView contentContainerStyle={styles.content}>
                 <Text style={styles.title}>Terms of Service</Text>
                 <Text style={styles.date}>Last Updated: January 28, 2026</Text>

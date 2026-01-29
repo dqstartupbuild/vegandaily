@@ -37,6 +37,7 @@ export default function SettingsScreen() {
                 options={{ 
                     title: 'Settings', 
                     headerShown: true,
+                    headerBackTitle: 'Back',
                     headerStyle: { backgroundColor: theme.colors.primary },
                     headerTintColor: theme.colors.textOnPrimary,
                 }} 

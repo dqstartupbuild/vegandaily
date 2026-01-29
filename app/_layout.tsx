@@ -48,6 +48,35 @@ export default function RootLayout() {
                             name="(tabs)"
                             options={{
                                 headerShown: false,
+                                headerBackTitle: 'Back',
+                            }}
+                        />
+                        <Stack.Screen
+                            name="settings"
+                            options={{
+                                title: 'Settings',
+                                headerBackTitle: 'Back',
+                            }}
+                        />
+                        <Stack.Screen
+                            name="support"
+                            options={{
+                                title: 'Support',
+                                headerBackTitle: 'Back',
+                            }}
+                        />
+                        <Stack.Screen
+                            name="privacy"
+                            options={{
+                                title: 'Privacy Policy',
+                                headerBackTitle: 'Back',
+                            }}
+                        />
+                        <Stack.Screen
+                            name="terms"
+                            options={{
+                                title: 'Terms of Service',
+                                headerBackTitle: 'Back',
                             }}
                         />
                         <Stack.Screen

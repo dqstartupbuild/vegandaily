@@ -20,7 +20,7 @@ export default function SupportPage() {
 
     return (
         <View style={styles.container}>
-            <Stack.Screen options={{ title: 'Support', headerShown: true }} />
+            <Stack.Screen options={{ title: 'Support', headerShown: true, headerBackTitle: 'Back' }} />
             <ScrollView contentContainerStyle={styles.content}>
                 <Text style={styles.title}>Support</Text>
                 <Text style={styles.text}>
