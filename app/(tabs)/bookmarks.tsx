@@ -39,8 +39,8 @@ export default function BookmarksScreen() {
 
     if (isLoading) {
         return (
-            <View style={[styles.container, { paddingTop: insets.top }]}>
-                <View style={styles.header}>
+            <View style={styles.container}>
+                <View style={[styles.header, { paddingTop: insets.top + theme.spacing.md }]}>
                     <Text style={styles.headerTitle}>My Bookmarks</Text>
                 </View>
                 <View style={styles.loadingContainer}>
@@ -51,9 +51,9 @@ export default function BookmarksScreen() {
     }
 
     return (
-        <View style={[styles.container, { paddingTop: insets.top }]}>
+        <View style={styles.container}>
             {/* Header */}
-            <View style={styles.header}>
+            <View style={[styles.header, { paddingTop: insets.top + theme.spacing.md }]}>
                 <Text style={styles.headerTitle}>My Bookmarks</Text>
                 <Text style={styles.headerSubtitle}>
                     {bookmarkedRecipes.length} saved recipe{bookmarkedRecipes.length !== 1 ? 's' : ''}

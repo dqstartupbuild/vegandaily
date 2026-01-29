@@ -57,9 +57,9 @@ export default function BrowseScreen() {
     }, [handleRecipePress]);
 
     return (
-        <View style={[styles.container, { paddingTop: insets.top }]}>
+        <View style={styles.container}>
             {/* Header */}
-            <View style={styles.header}>
+            <View style={[styles.header, { paddingTop: insets.top + theme.spacing.md }]}>
                 <Text style={styles.headerTitle}>Browse Recipes</Text>
                 <Text style={styles.headerSubtitle}>
                     {filteredRecipes.length} recipe{filteredRecipes.length !== 1 ? 's' : ''}
