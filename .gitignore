@@ -39,3 +39,13 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# AI/Agent Intelligence
+# We track the skills and rules, but ignore potential local caches
+.cursor/*
+!.cursor/rules/
+!.cursor/skills/
+.cursorrules
+
+# Keep all agent workflows and skills
+!.agents/
