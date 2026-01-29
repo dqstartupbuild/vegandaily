@@ -4,7 +4,7 @@ export const garlicNaan: Recipe = {
     id: 'garlic-naan',
     name: 'Vegan Garlic Naan',
     description: 'Fluffy homemade naan bread topped with savory garlic butter.',
-    image: require('../../../../assets/recipes/bread/naan.png'),
+    image: require('../../../../assets/recipes/bread/naan.webp'),
     mealType: 'bread',
     prepTime: 80, // Includes 1 hour rise
     cookTime: 15,

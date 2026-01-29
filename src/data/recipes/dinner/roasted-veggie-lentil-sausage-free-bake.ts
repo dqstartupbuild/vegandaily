@@ -4,7 +4,7 @@ export const roastedVeggieLentilSausageFreeBake: Recipe = {
     id: 'roasted-veggie-lentil-sausage-free-bake',
     name: 'Roasted Veggie Lentil "Sausage-Free" Bake',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/dinner/roasted-veggie-lentil-sausage-free-bake.png'),
+    image: require('../../../../assets/recipes/dinner/roasted-veggie-lentil-sausage-free-bake.webp'),
     mealType: 'dinner',
     prepTime: 15,
     cookTime: 30,

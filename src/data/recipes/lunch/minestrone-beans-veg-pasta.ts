@@ -4,7 +4,7 @@ export const minestroneBeansVegPasta: Recipe = {
     id: 'minestrone-beans-veg-pasta',
     name: 'Minestrone (Beans + Veg + Pasta)',
     description: 'A comforting pasta dish with bold, plant-forward flavors and a silky sauce.',
-    image: require('../../../../assets/recipes/lunch/minestrone-beans-veg-pasta.png'),
+    image: require('../../../../assets/recipes/lunch/minestrone-beans-veg-pasta.webp'),
     mealType: 'lunch',
     prepTime: 12,
     cookTime: 30,

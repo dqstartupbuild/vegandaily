@@ -4,7 +4,7 @@ export const butternutSquashRisottoCreamyNoDairy: Recipe = {
     id: 'butternut-squash-risotto-creamy-no-dairy',
     name: 'Butternut Squash Risotto (Creamy, No Dairy)',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/dinner/butternut-squash-risotto.png'),
+    image: require('../../../../assets/recipes/dinner/butternut-squash-risotto.webp'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 35,

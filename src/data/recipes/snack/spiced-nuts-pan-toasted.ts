@@ -4,7 +4,7 @@ export const spicedNutsPanToasted: Recipe = {
     id: 'spiced-nuts-pan-toasted',
     name: 'Spiced Nuts (Pan-Toasted)',
     description: 'A flavorful, plant-based snack recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/snack/spiced-nuts-pan-toasted.png'),
+    image: require('../../../../assets/recipes/snack/spiced-nuts-pan-toasted.webp'),
     mealType: 'snack',
     prepTime: 3,
     cookTime: 6,

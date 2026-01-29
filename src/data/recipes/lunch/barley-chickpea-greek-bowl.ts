@@ -4,7 +4,7 @@ export const barleyChickpeaGreekBowl: Recipe = {
     id: 'barley-chickpea-greek-bowl',
     name: 'Barley + Chickpea "Greek" Bowl',
     description: 'A balanced bowl layered with vibrant veggies and hearty plant proteins.',
-    image: require('../../../../assets/recipes/lunch/barley-chickpea-greek-bowl.png'),
+    image: require('../../../../assets/recipes/lunch/barley-chickpea-greek-bowl.webp'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 0,

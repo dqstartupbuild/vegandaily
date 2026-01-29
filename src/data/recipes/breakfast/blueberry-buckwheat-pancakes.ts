@@ -4,7 +4,7 @@ export const blueberryBuckwheatPancakes: Recipe = {
     id: 'blueberry-buckwheat-pancakes',
     name: 'Blueberry Buckwheat Pancakes',
     description: 'Fluffy, golden pancakes with a cozy, breakfast-ready flavor.',
-    image: require('../../../../assets/recipes/breakfast/blueberry-buckwheat-pancakes.png'),
+    image: require('../../../../assets/recipes/breakfast/blueberry-buckwheat-pancakes.webp'),
     mealType: 'breakfast',
     prepTime: 10,
     cookTime: 12,

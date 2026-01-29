@@ -4,7 +4,7 @@ export const splitPeaSoupThickCozy: Recipe = {
     id: 'split-pea-soup-thick-cozy',
     name: 'Split Pea Soup (Thick + Cozy)',
     description: 'A cozy, savory bowl that\'s hearty, warming, and easy to make.',
-    image: require('../../../../assets/recipes/lunch/split-pea-soup-thick-cozy.png'),
+    image: require('../../../../assets/recipes/lunch/split-pea-soup-thick-cozy.webp'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 50,

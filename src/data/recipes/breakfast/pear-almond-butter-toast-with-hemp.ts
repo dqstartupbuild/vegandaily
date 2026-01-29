@@ -4,7 +4,7 @@ export const pearAlmondButterToastWithHemp: Recipe = {
     id: 'pear-almond-butter-toast-with-hemp',
     name: 'Pear + Almond Butter Toast with Hemp',
     description: 'A flavorful, plant-based breakfast recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/breakfast/pear-almond-butter-toast-hemp.png'),
+    image: require('../../../../assets/recipes/breakfast/pear-almond-butter-toast-hemp.webp'),
     mealType: 'breakfast',
     prepTime: 6,
     cookTime: 3,

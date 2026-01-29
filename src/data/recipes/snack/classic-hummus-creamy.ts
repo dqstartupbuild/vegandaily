@@ -4,7 +4,7 @@ export const classicHummusCreamy: Recipe = {
     id: 'classic-hummus-creamy',
     name: 'Classic Hummus (Creamy)',
     description: 'A flavorful, plant-based snack recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/snack/classic-hummus-creamy.png'),
+    image: require('../../../../assets/recipes/snack/classic-hummus-creamy.webp'),
     mealType: 'snack',
     prepTime: 10,
     cookTime: 0,

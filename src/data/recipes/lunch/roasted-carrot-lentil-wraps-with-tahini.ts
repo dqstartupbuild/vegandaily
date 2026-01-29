@@ -4,7 +4,7 @@ export const roastedCarrotLentilWrapsWithTahini: Recipe = {
     id: 'roasted-carrot-lentil-wraps-with-tahini',
     name: 'Roasted Carrot + Lentil Wraps with Tahini',
     description: 'A portable, flavor-packed wrap that stays fresh and filling.',
-    image: require('../../../../assets/recipes/lunch/roasted-carrot-lentil-wraps-tahini.png'),
+    image: require('../../../../assets/recipes/lunch/roasted-carrot-lentil-wraps-tahini.webp'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 25,

@@ -91,7 +91,7 @@ flowchart TD
 ## Project Structure
 
 ```
-easyvegan/
+vegandaily/
 ├── .gitignore
 ├── AGENTS.md
 ├── CHANGELOG.md
@@ -114,128 +114,128 @@ easyvegan/
 │   ├── icon.png
 │   ├── recipes
 │   │   ├── bread
-│   │   │   ├── naan.png
-│   │   │   └── spelt-tortillas.png
+│   │   │   ├── naan.webp
+│   │   │   └── spelt-tortillas.webp
 │   │   ├── breakfast
-│   │   │   ├── apple-cinnamon-quinoa-breakfast-bowl.png
-│   │   │   ├── banana-walnut-baked-oatmeal-meal-prep.png
-│   │   │   ├── berry-chia-pudding.png
-│   │   │   ├── blueberry-buckwheat-pancakes.png
-│   │   │   ├── breakfast-burrito-beans-potatoes-salsa.png
-│   │   │   ├── chickpea-flour-omelet-veggies.png
-│   │   │   ├── chickpea-scramble-peppers.png
-│   │   │   ├── chickpeas-toast.png
-│   │   │   ├── cinnamon-apple-overnight-oats.png
-│   │   │   ├── date-nut-breakfast-bars-no-bake.png
-│   │   │   ├── high-fiber-smoothie-bowl-berry-flax.png
-│   │   │   ├── oatmeal-carrot-cake-bowl.png
-│   │   │   ├── omelette.png
-│   │   │   ├── overnight-oats.png
-│   │   │   ├── peanut-butter-banana-smoothie.png
-│   │   │   ├── pear-almond-butter-toast-hemp.png
-│   │   │   ├── pumpkin-pie-overnight-oats.png
-│   │   │   ├── savory-avocado-toast-tomato-hemp.png
-│   │   │   ├── savory-breakfast-lentils-garlic-greens.png
-│   │   │   ├── savory-oatmeal-mushrooms-spinach.png
-│   │   │   ├── sweet-potato-breakfast-hash-beans-greens.png
-│   │   │   ├── warm-millet-porridge-berries.png
-│   │   │   └── warm-quinoa-breakfast-bowl-coconut-mango.png
+│   │   │   ├── apple-cinnamon-quinoa-breakfast-bowl.webp
+│   │   │   ├── banana-walnut-baked-oatmeal-meal-prep.webp
+│   │   │   ├── berry-chia-pudding.webp
+│   │   │   ├── blueberry-buckwheat-pancakes.webp
+│   │   │   ├── breakfast-burrito-beans-potatoes-salsa.webp
+│   │   │   ├── chickpea-flour-omelet-veggies.webp
+│   │   │   ├── chickpea-scramble-peppers.webp
+│   │   │   ├── chickpeas-toast.webp
+│   │   │   ├── cinnamon-apple-overnight-oats.webp
+│   │   │   ├── date-nut-breakfast-bars-no-bake.webp
+│   │   │   ├── high-fiber-smoothie-bowl-berry-flax.webp
+│   │   │   ├── oatmeal-carrot-cake-bowl.webp
+│   │   │   ├── omelette.webp
+│   │   │   ├── overnight-oats.webp
+│   │   │   ├── peanut-butter-banana-smoothie.webp
+│   │   │   ├── pear-almond-butter-toast-hemp.webp
+│   │   │   ├── pumpkin-pie-overnight-oats.webp
+│   │   │   ├── savory-avocado-toast-tomato-hemp.webp
+│   │   │   ├── savory-breakfast-lentils-garlic-greens.webp
+│   │   │   ├── savory-oatmeal-mushrooms-spinach.webp
+│   │   │   ├── sweet-potato-breakfast-hash-beans-greens.webp
+│   │   │   ├── warm-millet-porridge-berries.webp
+│   │   │   └── warm-quinoa-breakfast-bowl-coconut-mango.webp
 │   │   ├── dessert
-│   │   │   ├── baked-cinnamon-pears-walnuts.png
-│   │   │   ├── banana-nice-cream-1-ingredient-base.png
-│   │   │   ├── black-bean-brownies.png
-│   │   │   ├── blondies.png
-│   │   │   ├── carrot-cake-bliss-balls.png
-│   │   │   ├── chocolate-avocado-mousse.png
-│   │   │   ├── cinnamon-rolls.png
-│   │   │   ├── coconut-rice-pudding-simple.png
-│   │   │   ├── dark-chocolate-covered-almonds-quick.png
-│   │   │   ├── lemon-blueberry-chia-jam.png
-│   │   │   ├── matcha-cookies.png
-│   │   │   ├── oatmeal-creme-pies.png
-│   │   │   ├── peanut-butter-chocolate-bark-freezer.png
-│   │   │   ├── strawberry-oat-shortcake-bowl.png
-│   │   │   └── warm-apple-crumble-oat-topping.png
+│   │   │   ├── baked-cinnamon-pears-walnuts.webp
+│   │   │   ├── banana-nice-cream-1-ingredient-base.webp
+│   │   │   ├── black-bean-brownies.webp
+│   │   │   ├── blondies.webp
+│   │   │   ├── carrot-cake-bliss-balls.webp
+│   │   │   ├── chocolate-avocado-mousse.webp
+│   │   │   ├── cinnamon-rolls.webp
+│   │   │   ├── coconut-rice-pudding-simple.webp
+│   │   │   ├── dark-chocolate-covered-almonds-quick.webp
+│   │   │   ├── lemon-blueberry-chia-jam.webp
+│   │   │   ├── matcha-cookies.webp
+│   │   │   ├── oatmeal-creme-pies.webp
+│   │   │   ├── peanut-butter-chocolate-bark-freezer.webp
+│   │   │   ├── strawberry-oat-shortcake-bowl.webp
+│   │   │   └── warm-apple-crumble-oat-topping.webp
 │   │   ├── dinner
-│   │   │   ├── black-bean-sweet-potato-chili.png
-│   │   │   ├── butternut-squash-risotto.png
-│   │   │   ├── cabbage-rolls.png
-│   │   │   ├── cashew-tomato-soup-veggie-sandwich.png
-│   │   │   ├── chickpea-shawarma-bowl.png
-│   │   │   ├── coconut-chickpea-curry-spinach.png
-│   │   │   ├── creamy-cashew-tomato-soup-grilled-veggie-sandwich.png
-│   │   │   ├── creamy-coconut-red-lentil-curry.png
-│   │   │   ├── creamy-potato-corn-chowder-no-dairy.png
-│   │   │   ├── creamy-white-bean-tomato-orzo.png
-│   │   │   ├── eggplant-chickpea-tagine.png
-│   │   │   ├── garlic-lemon-broccoli-chickpea-pasta.png
-│   │   │   ├── hearty-lentil-bolognese.png
-│   │   │   ├── jamaican-style-cabbage-beans-over-rice.png
-│   │   │   ├── lemon-garlic-pasta-cannellini-asparagus.png
-│   │   │   ├── lentil-shepherds-pie.png
-│   │   │   ├── moroccan-lentil-stew-carrot-apricot.png
-│   │   │   ├── mushroom-steak-garlic-herb-potatoes.png
-│   │   │   ├── one-pan-pesto-veggie-pasta.png
-│   │   │   ├── one-pot-spanish-beans-greens.png
-│   │   │   ├── pasta-primavera.png
-│   │   │   ├── red-beans-rice-weeknight-version.png
-│   │   │   ├── roasted-cauliflower-tacos-lime-slaw.png
-│   │   │   ├── roasted-veggie-lentil-sausage-free-bake.png
-│   │   │   ├── sheet-pan-gnocchi-veg-no-meat-no-dairy.png
-│   │   │   ├── stuffed-bell-peppers-quinoa-beans.png
-│   │   │   ├── stuffed-eggplant-lentils-herbs.png
-│   │   │   ├── stuffed-sweet-potatoes.png
-│   │   │   ├── thai-peanut-chickpea-curry.png
-│   │   │   ├── vegetable-paella.png
-│   │   │   ├── veggie-fried-rice-chickpeas.png
-│   │   │   └── zucchini-boats-with-lentil-marinara.png
+│   │   │   ├── black-bean-sweet-potato-chili.webp
+│   │   │   ├── butternut-squash-risotto.webp
+│   │   │   ├── cabbage-rolls.webp
+│   │   │   ├── cashew-tomato-soup-veggie-sandwich.webp
+│   │   │   ├── chickpea-shawarma-bowl.webp
+│   │   │   ├── coconut-chickpea-curry-spinach.webp
+│   │   │   ├── creamy-cashew-tomato-soup-grilled-veggie-sandwich.webp
+│   │   │   ├── creamy-coconut-red-lentil-curry.webp
+│   │   │   ├── creamy-potato-corn-chowder-no-dairy.webp
+│   │   │   ├── creamy-white-bean-tomato-orzo.webp
+│   │   │   ├── eggplant-chickpea-tagine.webp
+│   │   │   ├── garlic-lemon-broccoli-chickpea-pasta.webp
+│   │   │   ├── hearty-lentil-bolognese.webp
+│   │   │   ├── jamaican-style-cabbage-beans-over-rice.webp
+│   │   │   ├── lemon-garlic-pasta-cannellini-asparagus.webp
+│   │   │   ├── lentil-shepherds-pie.webp
+│   │   │   ├── moroccan-lentil-stew-carrot-apricot.webp
+│   │   │   ├── mushroom-steak-garlic-herb-potatoes.webp
+│   │   │   ├── one-pan-pesto-veggie-pasta.webp
+│   │   │   ├── one-pot-spanish-beans-greens.webp
+│   │   │   ├── pasta-primavera.webp
+│   │   │   ├── red-beans-rice-weeknight-version.webp
+│   │   │   ├── roasted-cauliflower-tacos-lime-slaw.webp
+│   │   │   ├── roasted-veggie-lentil-sausage-free-bake.webp
+│   │   │   ├── sheet-pan-gnocchi-veg-no-meat-no-dairy.webp
+│   │   │   ├── stuffed-bell-peppers-quinoa-beans.webp
+│   │   │   ├── stuffed-eggplant-lentils-herbs.webp
+│   │   │   ├── stuffed-sweet-potatoes.webp
+│   │   │   ├── thai-peanut-chickpea-curry.webp
+│   │   │   ├── vegetable-paella.webp
+│   │   │   ├── veggie-fried-rice-chickpeas.webp
+│   │   │   └── zucchini-boats-with-lentil-marinara.webp
 │   │   ├── lunch
-│   │   │   ├── baked-falafel-salad-bowl.png
-│   │   │   ├── barley-chickpea-greek-bowl.png
-│   │   │   ├── black-bean-corn-salad-meal-prep.png
-│   │   │   ├── brothy-miso-mushroom-noodle-soup.png
-│   │   │   ├── creamy-avocado-pea-pasta-green-sauce.png
-│   │   │   ├── creamy-roasted-red-pepper-pasta-salad.png
-│   │   │   ├── creamy-white-bean-broccoli-baked-potato-bowl.png
-│   │   │   ├── curried-chickpea-tuna-sandwich.png
-│   │   │   ├── ginger-carrot-red-lentil-soup.png
-│   │   │   ├── lemon-dill-white-bean-cucumber-salad.png
-│   │   │   ├── lentil-veggie-soup-one-pot.png
-│   │   │   ├── mediterranean-chickpea-salad-wraps.png
-│   │   │   ├── mediterranean-wrap.png
-│   │   │   ├── minestrone-beans-veg-pasta.png
-│   │   │   ├── quinoa-tabbouleh-chickpeas.png
-│   │   │   ├── rainbow-quinoa-bowl-lemon-tahini.png
-│   │   │   ├── red-beans-rice.png
-│   │   │   ├── red-beans.png
-│   │   │   ├── roasted-beet-orange-walnut-salad.png
-│   │   │   ├── roasted-carrot-lentil-wraps-tahini.png
-│   │   │   ├── roasted-cauliflower-tahini-rice-bowl.png
-│   │   │   ├── roasted-veg-lentil-salad-lemon-mustard.png
-│   │   │   ├── roasted-veggie-hummus-pita.png
-│   │   │   ├── sesame-ginger-cabbage-noodle-soup.png
-│   │   │   ├── smashed-chickpea-pita-pickles-greens.png
-│   │   │   ├── smoky-black-bean-quesadilla-no-cheese.png
-│   │   │   ├── smoky-corn-black-bean-rice-salad.png
-│   │   │   ├── spicy-peanut-soba-noodle-bowl.png
-│   │   │   ├── split-pea-soup-thick-cozy.png
-│   │   │   ├── sweet-potato-white-bean-kale-salad.png
-│   │   │   ├── tomato-basil-white-bean-toasts.png
-│   │   │   ├── tomato-white-bean-pizza-toasts.png
-│   │   │   ├── warm-farro-bowl-mushrooms-spinach.png
-│   │   │   └── white-bean-mash.png
+│   │   │   ├── baked-falafel-salad-bowl.webp
+│   │   │   ├── barley-chickpea-greek-bowl.webp
+│   │   │   ├── black-bean-corn-salad-meal-prep.webp
+│   │   │   ├── brothy-miso-mushroom-noodle-soup.webp
+│   │   │   ├── creamy-avocado-pea-pasta-green-sauce.webp
+│   │   │   ├── creamy-roasted-red-pepper-pasta-salad.webp
+│   │   │   ├── creamy-white-bean-broccoli-baked-potato-bowl.webp
+│   │   │   ├── curried-chickpea-tuna-sandwich.webp
+│   │   │   ├── ginger-carrot-red-lentil-soup.webp
+│   │   │   ├── lemon-dill-white-bean-cucumber-salad.webp
+│   │   │   ├── lentil-veggie-soup-one-pot.webp
+│   │   │   ├── mediterranean-chickpea-salad-wraps.webp
+│   │   │   ├── mediterranean-wrap.webp
+│   │   │   ├── minestrone-beans-veg-pasta.webp
+│   │   │   ├── quinoa-tabbouleh-chickpeas.webp
+│   │   │   ├── rainbow-quinoa-bowl-lemon-tahini.webp
+│   │   │   ├── red-beans-rice.webp
+│   │   │   ├── red-beans.webp
+│   │   │   ├── roasted-beet-orange-walnut-salad.webp
+│   │   │   ├── roasted-carrot-lentil-wraps-tahini.webp
+│   │   │   ├── roasted-cauliflower-tahini-rice-bowl.webp
+│   │   │   ├── roasted-veg-lentil-salad-lemon-mustard.webp
+│   │   │   ├── roasted-veggie-hummus-pita.webp
+│   │   │   ├── sesame-ginger-cabbage-noodle-soup.webp
+│   │   │   ├── smashed-chickpea-pita-pickles-greens.webp
+│   │   │   ├── smoky-black-bean-quesadilla-no-cheese.webp
+│   │   │   ├── smoky-corn-black-bean-rice-salad.webp
+│   │   │   ├── spicy-peanut-soba-noodle-bowl.webp
+│   │   │   ├── split-pea-soup-thick-cozy.webp
+│   │   │   ├── sweet-potato-white-bean-kale-salad.webp
+│   │   │   ├── tomato-basil-white-bean-toasts.webp
+│   │   │   ├── tomato-white-bean-pizza-toasts.webp
+│   │   │   ├── warm-farro-bowl-mushrooms-spinach.webp
+│   │   │   └── white-bean-mash.webp
 │   │   └── snack
-│   │       ├── apple-nachos-pb-seeds.png
-│   │       ├── classic-hummus-creamy.png
-│   │       ├── date-tahini-energy-bites.png
-│   │       ├── guacamole-veggie-sticks.png
-│   │       ├── kimchi.png
-│   │       ├── lemon-garlic-green-peas-warm.png
-│   │       ├── quick-pickled-cucumbers.png
-│   │       ├── roasted-chickpeas-crunchy.png
-│   │       ├── smoky-salsa-style-black-bean-dip.png
-│   │       ├── spiced-nuts-pan-toasted.png
-│   │       └── warm-cinnamon-walnuts.png
+│   │       ├── apple-nachos-pb-seeds.webp
+│   │       ├── classic-hummus-creamy.webp
+│   │       ├── date-tahini-energy-bites.webp
+│   │       ├── guacamole-veggie-sticks.webp
+│   │       ├── kimchi.webp
+│   │       ├── lemon-garlic-green-peas-warm.webp
+│   │       ├── quick-pickled-cucumbers.webp
+│   │       ├── roasted-chickpeas-crunchy.webp
+│   │       ├── smoky-salsa-style-black-bean-dip.webp
+│   │       ├── spiced-nuts-pan-toasted.webp
+│   │       └── warm-cinnamon-walnuts.webp
 │   └── splash-icon.png
 ├── docs
 │   └── possible-features.md
@@ -537,8 +537,8 @@ const styles = StyleSheet.create({
 
 ```bash
 # Clone the repository
-git clone https://github.com/starship/easyvegan.git
-cd easyvegan
+git clone https://github.com/starship/vegandaily.git
+cd vegandaily
 
 # Install dependencies
 npm install
@@ -665,7 +665,7 @@ export const commonIngredients = {
 ### Phase 2: Enhancement (Planned)
 - [x] Adjustable servings with dynamic ingredient scaling
 - [x] Fraction formatting for ingredient amounts (1/2 instead of 0.5)
-- [ ] Recipe images
+- [x] Recipe images
 - [ ] Cooking timer
 - [ ] Dark mode support
 
@@ -674,7 +674,7 @@ export const commonIngredients = {
 - [ ] User comments
 - [ ] Cross-device syncing (Backend required)
 - [ ] Community recipe submissions
-- [ ] Recipe images (dynamic loading)
+- [x] Recipe images (dynamic loading)
 - [ ] RevenueCat integration (Paywall for Browse/Bookmarks)
 
 ---

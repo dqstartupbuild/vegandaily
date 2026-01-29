@@ -4,7 +4,7 @@ export const roastedChickpeasCrunchy: Recipe = {
     id: 'roasted-chickpeas-crunchy',
     name: 'Roasted Chickpeas (Crunchy)',
     description: 'A flavorful, plant-based snack recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/snack/roasted-chickpeas-crunchy.png'),
+    image: require('../../../../assets/recipes/snack/roasted-chickpeas-crunchy.webp'),
     mealType: 'snack',
     prepTime: 5,
     cookTime: 30,

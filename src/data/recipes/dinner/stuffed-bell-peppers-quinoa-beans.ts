@@ -4,7 +4,7 @@ export const stuffedBellPeppersQuinoaBeans: Recipe = {
     id: 'stuffed-bell-peppers-quinoa-beans',
     name: 'Stuffed Bell Peppers (Quinoa + Beans)',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/dinner/stuffed-bell-peppers-quinoa-beans.png'),
+    image: require('../../../../assets/recipes/dinner/stuffed-bell-peppers-quinoa-beans.webp'),
     mealType: 'dinner',
     prepTime: 15,
     cookTime: 30,

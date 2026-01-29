@@ -4,7 +4,7 @@ export const warmFarroBowlWithMushroomsSpinach: Recipe = {
     id: 'warm-farro-bowl-with-mushrooms-spinach',
     name: 'Warm Farro Bowl with Mushrooms + Spinach',
     description: 'A balanced bowl layered with vibrant veggies and hearty plant proteins.',
-    image: require('../../../../assets/recipes/lunch/warm-farro-bowl-mushrooms-spinach.png'),
+    image: require('../../../../assets/recipes/lunch/warm-farro-bowl-mushrooms-spinach.webp'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 15,

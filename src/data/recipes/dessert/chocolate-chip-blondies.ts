@@ -4,7 +4,7 @@ export const chocolateChipBlondies: Recipe = {
     id: 'chocolate-chip-blondies',
     name: 'Almond Butter Chocolate Chip Blondies',
     description: 'Fudgy, gluten-free friendly blondies made with almond butter and loaded with chocolate chunks.',
-    image: require('../../../../assets/recipes/dessert/blondies.png'),
+    image: require('../../../../assets/recipes/dessert/blondies.webp'),
     mealType: 'dessert',
     prepTime: 15,
     cookTime: 25,

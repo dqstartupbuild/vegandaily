@@ -4,7 +4,7 @@ export const sesameGingerCabbageNoodleSoupQuick: Recipe = {
     id: 'sesame-ginger-cabbage-noodle-soup-quick',
     name: 'Sesame Ginger Cabbage Noodle Soup (Quick)',
     description: 'A cozy, savory bowl that\'s hearty, warming, and easy to make.',
-    image: require('../../../../assets/recipes/lunch/sesame-ginger-cabbage-noodle-soup.png'),
+    image: require('../../../../assets/recipes/lunch/sesame-ginger-cabbage-noodle-soup.webp'),
     mealType: 'lunch',
     prepTime: 8,
     cookTime: 12,

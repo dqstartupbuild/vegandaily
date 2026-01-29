@@ -4,7 +4,7 @@ export const mushroomSteakGarlicHerbPotatoes: Recipe = {
     id: 'mushroom-steak-garlic-herb-potatoes',
     name: 'Mushroom "Steak" + Garlic Herb Potatoes',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/dinner/mushroom-steak-garlic-herb-potatoes.png'),
+    image: require('../../../../assets/recipes/dinner/mushroom-steak-garlic-herb-potatoes.webp'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 25,

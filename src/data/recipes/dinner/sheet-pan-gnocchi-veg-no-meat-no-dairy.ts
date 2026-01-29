@@ -4,7 +4,7 @@ export const sheetPanGnocchiVegNoMeatNoDairy: Recipe = {
     id: 'sheet-pan-gnocchi-veg-no-meat-no-dairy',
     name: 'Sheet Pan Gnocchi + Veg (No Meat, No Dairy)',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/dinner/sheet-pan-gnocchi-veg-no-meat-no-dairy.png'),
+    image: require('../../../../assets/recipes/dinner/sheet-pan-gnocchi-veg-no-meat-no-dairy.webp'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 20,

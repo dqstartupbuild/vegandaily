@@ -4,7 +4,7 @@ export const quinoaTabboulehChickpeas: Recipe = {
     id: 'quinoa-tabbouleh-chickpeas',
     name: 'Quinoa Tabbouleh + Chickpeas',
     description: 'A flavorful, plant-based lunch recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/lunch/quinoa-tabbouleh-chickpeas.png'),
+    image: require('../../../../assets/recipes/lunch/quinoa-tabbouleh-chickpeas.webp'),
     mealType: 'lunch',
     prepTime: 15,
     cookTime: 0,

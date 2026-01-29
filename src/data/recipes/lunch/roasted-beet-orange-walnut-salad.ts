@@ -4,7 +4,7 @@ export const roastedBeetOrangeWalnutSalad: Recipe = {
     id: 'roasted-beet-orange-walnut-salad',
     name: 'Roasted Beet + Orange + Walnut Salad',
     description: 'A fresh, colorful salad with bright flavors and a satisfying crunch.',
-    image: require('../../../../assets/recipes/lunch/roasted-beet-orange-walnut-salad.png'),
+    image: require('../../../../assets/recipes/lunch/roasted-beet-orange-walnut-salad.webp'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 45,

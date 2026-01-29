@@ -4,7 +4,7 @@ export const bananaNiceCream1IngredientBase: Recipe = {
     id: 'banana-nice-cream-1-ingredient-base',
     name: 'Banana "Nice Cream" (1-Ingredient Base)',
     description: 'A flavorful, plant-based dessert recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/dessert/banana-nice-cream-1-ingredient-base.png'),
+    image: require('../../../../assets/recipes/dessert/banana-nice-cream-1-ingredient-base.webp'),
     mealType: 'dessert',
     prepTime: 5,
     cookTime: 0,

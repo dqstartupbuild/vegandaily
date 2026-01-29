@@ -4,7 +4,7 @@ export const peanutButterBananaSmoothie: Recipe = {
     id: 'peanut-butter-banana-smoothie',
     name: 'Peanut Butter Banana Smoothie',
     description: 'A creamy, energizing smoothie that blends plant-based goodness into a quick breakfast.',
-    image: require('../../../../assets/recipes/breakfast/peanut-butter-banana-smoothie.png'),
+    image: require('../../../../assets/recipes/breakfast/peanut-butter-banana-smoothie.webp'),
     mealType: 'breakfast',
     prepTime: 5,
     cookTime: 0,

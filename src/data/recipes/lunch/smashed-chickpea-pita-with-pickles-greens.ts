@@ -4,7 +4,7 @@ export const smashedChickpeaPitaWithPicklesGreens: Recipe = {
     id: 'smashed-chickpea-pita-with-pickles-greens',
     name: 'Smashed Chickpea Pita with Pickles + Greens',
     description: 'A flavorful, plant-based lunch recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/lunch/smashed-chickpea-pita-pickles-greens.png'),
+    image: require('../../../../assets/recipes/lunch/smashed-chickpea-pita-pickles-greens.webp'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 0,

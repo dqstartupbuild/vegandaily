@@ -4,7 +4,7 @@ export const chickpeaScrambleNoTofuPeppers: Recipe = {
     id: 'chickpea-scramble-no-tofu-peppers',
     name: 'Chickpea "Scramble" (No Tofu) + Peppers',
     description: 'A flavorful, plant-based breakfast recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/breakfast/chickpea-scramble-peppers.png'),
+    image: require('../../../../assets/recipes/breakfast/chickpea-scramble-peppers.webp'),
     mealType: 'breakfast',
     prepTime: 8,
     cookTime: 10,

@@ -4,7 +4,7 @@ export const warmQuinoaBreakfastBowlCoconutMango: Recipe = {
     id: 'warm-quinoa-breakfast-bowl-coconut-mango',
     name: 'Warm Quinoa Breakfast Bowl (Coconut + Mango)',
     description: 'A balanced bowl layered with vibrant veggies and hearty plant proteins.',
-    image: require('../../../../assets/recipes/breakfast/warm-quinoa-breakfast-bowl-coconut-mango.png'),
+    image: require('../../../../assets/recipes/breakfast/warm-quinoa-breakfast-bowl-coconut-mango.webp'),
     mealType: 'breakfast',
     prepTime: 5,
     cookTime: 15,

@@ -4,7 +4,7 @@ export const highFiberSmoothieBowlBerryFlax: Recipe = {
     id: 'high-fiber-smoothie-bowl-berry-flax',
     name: 'High-Fiber Smoothie Bowl (Berry + Flax)',
     description: 'A creamy, energizing smoothie that blends plant-based goodness into a quick breakfast.',
-    image: require('../../../../assets/recipes/breakfast/high-fiber-smoothie-bowl-berry-flax.png'),
+    image: require('../../../../assets/recipes/breakfast/high-fiber-smoothie-bowl-berry-flax.webp'),
     mealType: 'breakfast',
     prepTime: 7,
     cookTime: 0,

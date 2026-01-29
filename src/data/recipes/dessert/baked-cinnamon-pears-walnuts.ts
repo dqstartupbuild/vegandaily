@@ -4,7 +4,7 @@ export const bakedCinnamonPearsWalnuts: Recipe = {
     id: 'baked-cinnamon-pears-walnuts',
     name: 'Baked Cinnamon Pears + Walnuts',
     description: 'A flavorful, plant-based dessert recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/dessert/baked-cinnamon-pears-walnuts.png'),
+    image: require('../../../../assets/recipes/dessert/baked-cinnamon-pears-walnuts.webp'),
     mealType: 'dessert',
     prepTime: 8,
     cookTime: 20,

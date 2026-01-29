@@ -4,7 +4,7 @@ export const oatmealCremePies: Recipe = {
     id: 'oatmeal-creme-pies',
     name: 'Vegan Oatmeal Creme Pies',
     description: 'Nostalgic spiced oat cookies sandwiched with a fluffy vanilla creme filling.',
-    image: require('../../../../assets/recipes/dessert/oatmeal-creme-pies.png'),
+    image: require('../../../../assets/recipes/dessert/oatmeal-creme-pies.webp'),
     mealType: 'dessert',
     prepTime: 30,
     cookTime: 12,

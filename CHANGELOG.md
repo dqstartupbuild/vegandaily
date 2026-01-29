@@ -5,6 +5,18 @@ All notable changes to Vegan Daily will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-01-28
+
+### Performance
+- **Image Optimization**: Optimized 117 recipe images, reducing total asset size from ~292MB to ~12MB (95% reduction).
+  - Converted all recipe images from PNG to WebP.
+  - Resized high-resolution images to max 1000px dimensions.
+  - Applied quality compression for efficient mobile delivery.
+
+### Changed
+- Updated all recipe data modules to reference optimized `.webp` assets.
+- Updated documentation (README.md, AGENTS.md) to reflect the new asset structure.
+
 ---
 
 ## [1.2.0] - 2026-01-27

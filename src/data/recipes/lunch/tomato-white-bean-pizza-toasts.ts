@@ -4,7 +4,7 @@ export const tomatoWhiteBeanPizzaToasts: Recipe = {
     id: 'tomato-white-bean-pizza-toasts',
     name: 'Tomato White Bean "Pizza" Toasts',
     description: 'A flavorful, plant-based lunch recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/lunch/tomato-white-bean-pizza-toasts.png'),
+    image: require('../../../../assets/recipes/lunch/tomato-white-bean-pizza-toasts.webp'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 6,

@@ -4,7 +4,7 @@ export const curriedChickpeaTunaSandwichNoMayoNeeded: Recipe = {
     id: 'curried-chickpea-tuna-sandwich-no-mayo-needed',
     name: 'Curried Chickpea "Tuna" Sandwich (No Mayo Needed)',
     description: 'A flavorful, plant-based lunch recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/lunch/curried-chickpea-tuna-sandwich.png'),
+    image: require('../../../../assets/recipes/lunch/curried-chickpea-tuna-sandwich.webp'),
     mealType: 'lunch',
     prepTime: 12,
     cookTime: 0,

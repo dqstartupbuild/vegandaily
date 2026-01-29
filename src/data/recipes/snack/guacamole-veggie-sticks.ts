@@ -4,7 +4,7 @@ export const guacamoleVeggieSticks: Recipe = {
     id: 'guacamole-veggie-sticks',
     name: 'Guacamole + Veggie Sticks',
     description: 'A flavorful, plant-based snack recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/snack/guacamole-veggie-sticks.png'),
+    image: require('../../../../assets/recipes/snack/guacamole-veggie-sticks.webp'),
     mealType: 'snack',
     prepTime: 10,
     cookTime: 0,

@@ -4,7 +4,7 @@ export const edamameAlternativeSnackLemonGarlicGreenPeasWarm: Recipe = {
     id: 'edamame-alternative-snack-lemon-garlic-green-peas-warm',
     name: 'Edamame Alternative Snack: Lemon-Garlic Green Peas (Warm)',
     description: 'A flavorful, plant-based snack recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/snack/lemon-garlic-green-peas-warm.png'),
+    image: require('../../../../assets/recipes/snack/lemon-garlic-green-peas-warm.webp'),
     mealType: 'snack',
     prepTime: 3,
     cookTime: 6,

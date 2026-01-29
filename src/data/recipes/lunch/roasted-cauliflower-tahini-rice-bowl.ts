@@ -4,7 +4,7 @@ export const roastedCauliflowerTahiniRiceBowl: Recipe = {
     id: 'roasted-cauliflower-tahini-rice-bowl',
     name: 'Roasted Cauliflower + Tahini Rice Bowl',
     description: 'A balanced bowl layered with vibrant veggies and hearty plant proteins.',
-    image: require('../../../../assets/recipes/lunch/roasted-cauliflower-tahini-rice-bowl.png'),
+    image: require('../../../../assets/recipes/lunch/roasted-cauliflower-tahini-rice-bowl.webp'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 25,

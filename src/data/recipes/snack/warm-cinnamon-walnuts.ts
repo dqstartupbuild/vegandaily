@@ -4,7 +4,7 @@ export const warmCinnamonWalnuts: Recipe = {
     id: 'warm-cinnamon-walnuts',
     name: 'Warm Cinnamon Walnuts',
     description: 'A flavorful, plant-based snack recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/snack/warm-cinnamon-walnuts.png'),
+    image: require('../../../../assets/recipes/snack/warm-cinnamon-walnuts.webp'),
     mealType: 'snack',
     prepTime: 3,
     cookTime: 5,

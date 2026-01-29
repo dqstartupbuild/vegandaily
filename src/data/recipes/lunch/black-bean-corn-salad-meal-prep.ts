@@ -4,7 +4,7 @@ export const blackBeanCornSaladMealPrep: Recipe = {
     id: 'black-bean-corn-salad-meal-prep',
     name: 'Black Bean Corn Salad (Meal Prep)',
     description: 'A fresh, colorful salad with bright flavors and a satisfying crunch.',
-    image: require('../../../../assets/recipes/lunch/black-bean-corn-salad-meal-prep.png'),
+    image: require('../../../../assets/recipes/lunch/black-bean-corn-salad-meal-prep.webp'),
     mealType: 'lunch',
     prepTime: 12,
     cookTime: 0,

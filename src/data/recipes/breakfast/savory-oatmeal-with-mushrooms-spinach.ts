@@ -4,7 +4,7 @@ export const savoryOatmealWithMushroomsSpinach: Recipe = {
     id: 'savory-oatmeal-with-mushrooms-spinach',
     name: 'Savory Oatmeal with Mushrooms + Spinach',
     description: 'A flavorful, plant-based breakfast recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/breakfast/savory-oatmeal-mushrooms-spinach.png'),
+    image: require('../../../../assets/recipes/breakfast/savory-oatmeal-mushrooms-spinach.webp'),
     mealType: 'breakfast',
     prepTime: 5,
     cookTime: 8,

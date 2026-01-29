@@ -4,7 +4,7 @@ export const onePotSpanishBeansGreens: Recipe = {
     id: 'one-pot-spanish-beans-greens',
     name: 'One-Pot Spanish Beans + Greens',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/dinner/one-pot-spanish-beans-greens.png'),
+    image: require('../../../../assets/recipes/dinner/one-pot-spanish-beans-greens.webp'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 25,

@@ -4,7 +4,7 @@ export const cinnamonAppleOvernightOats: Recipe = {
     id: 'cinnamon-apple-overnight-oats',
     name: 'Cinnamon Apple Overnight Oats',
     description: 'A flavorful, plant-based breakfast recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/breakfast/cinnamon-apple-overnight-oats.png'),
+    image: require('../../../../assets/recipes/breakfast/cinnamon-apple-overnight-oats.webp'),
     mealType: 'breakfast',
     prepTime: 8,
     cookTime: 0,

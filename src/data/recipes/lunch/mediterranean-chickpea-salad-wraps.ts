@@ -4,7 +4,7 @@ export const mediterraneanChickpeaSaladWraps: Recipe = {
     id: 'mediterranean-chickpea-salad-wraps',
     name: 'Mediterranean Chickpea Salad Wraps',
     description: 'A fresh, colorful salad with bright flavors and a satisfying crunch.',
-    image: require('../../../../assets/recipes/lunch/mediterranean-chickpea-salad-wraps.png'),
+    image: require('../../../../assets/recipes/lunch/mediterranean-chickpea-salad-wraps.webp'),
     mealType: 'lunch',
     prepTime: 12,
     cookTime: 0,

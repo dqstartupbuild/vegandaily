@@ -4,7 +4,7 @@ export const roastedCauliflowerTacosLimeSlaw: Recipe = {
     id: 'roasted-cauliflower-tacos-lime-slaw',
     name: 'Roasted Cauliflower Tacos + Lime Slaw',
     description: 'A zesty taco night staple with crisp veggies and bold seasoning.',
-    image: require('../../../../assets/recipes/dinner/roasted-cauliflower-tacos-lime-slaw.png'),
+    image: require('../../../../assets/recipes/dinner/roasted-cauliflower-tacos-lime-slaw.webp'),
     mealType: 'dinner',
     prepTime: 15,
     cookTime: 20,

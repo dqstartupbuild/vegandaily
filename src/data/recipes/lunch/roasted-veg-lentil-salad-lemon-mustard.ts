@@ -4,7 +4,7 @@ export const roastedVegLentilSaladLemonMustard: Recipe = {
     id: 'roasted-veg-lentil-salad-lemon-mustard',
     name: 'Roasted Veg + Lentil Salad (Lemon Mustard)',
     description: 'A fresh, colorful salad with bright flavors and a satisfying crunch.',
-    image: require('../../../../assets/recipes/lunch/roasted-veg-lentil-salad-lemon-mustard.png'),
+    image: require('../../../../assets/recipes/lunch/roasted-veg-lentil-salad-lemon-mustard.webp'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 25,

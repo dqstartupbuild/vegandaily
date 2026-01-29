@@ -4,7 +4,7 @@ export const breakfastBurritoBeansPotatoesSalsa: Recipe = {
     id: 'breakfast-burrito-beans-potatoes-salsa',
     name: 'Breakfast Burrito (Beans + Potatoes + Salsa)',
     description: 'A flavorful, plant-based breakfast recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/breakfast/breakfast-burrito-beans-potatoes-salsa.png'),
+    image: require('../../../../assets/recipes/breakfast/breakfast-burrito-beans-potatoes-salsa.webp'),
     mealType: 'breakfast',
     prepTime: 10,
     cookTime: 15,

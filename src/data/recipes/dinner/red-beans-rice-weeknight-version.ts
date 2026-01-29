@@ -4,7 +4,7 @@ export const redBeansRiceWeeknightVersion: Recipe = {
     id: 'red-beans-rice-weeknight-version',
     name: 'Red Beans & Rice (Weeknight Version)',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/dinner/red-beans-rice-weeknight-version.png'),
+    image: require('../../../../assets/recipes/dinner/red-beans-rice-weeknight-version.webp'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 30,

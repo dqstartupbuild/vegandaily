@@ -4,7 +4,7 @@ export const blackBeanBrownies: Recipe = {
     id: 'black-bean-brownies',
     name: 'Fudgy Black Bean Brownies',
     description: 'Rich, fudgy gluten-free brownies made with black beans - you won\'t taste the beans!',
-    image: require('../../../../assets/recipes/dessert/black-bean-brownies.png'),
+    image: require('../../../../assets/recipes/dessert/black-bean-brownies.webp'),
     mealType: 'dessert',
     prepTime: 15,
     cookTime: 30,

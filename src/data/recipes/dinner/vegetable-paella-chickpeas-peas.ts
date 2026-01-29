@@ -4,7 +4,7 @@ export const vegetablePaellaChickpeasPeas: Recipe = {
     id: 'vegetable-paella-chickpeas-peas',
     name: 'Vegetable Paella (Chickpeas + Peas)',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/dinner/vegetable-paella.png'),
+    image: require('../../../../assets/recipes/dinner/vegetable-paella.webp'),
     mealType: 'dinner',
     prepTime: 12,
     cookTime: 35,

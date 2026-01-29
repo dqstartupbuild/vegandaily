@@ -4,7 +4,7 @@ export const creamyCoconutRedLentilCurry: Recipe = {
     id: 'creamy-coconut-red-lentil-curry',
     name: 'Creamy Coconut Red Lentil Curry',
     description: 'A fragrant, creamy curry built for weeknight comfort.',
-    image: require('../../../../assets/recipes/dinner/creamy-coconut-red-lentil-curry.png'),
+    image: require('../../../../assets/recipes/dinner/creamy-coconut-red-lentil-curry.webp'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 25,

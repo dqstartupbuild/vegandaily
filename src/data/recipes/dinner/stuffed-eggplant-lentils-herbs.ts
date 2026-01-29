@@ -4,7 +4,7 @@ export const stuffedEggplantLentilsHerbs: Recipe = {
     id: 'stuffed-eggplant-lentils-herbs',
     name: 'Stuffed Eggplant (Lentils + Herbs)',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: require('../../../../assets/recipes/dinner/stuffed-eggplant-lentils-herbs.png'),
+    image: require('../../../../assets/recipes/dinner/stuffed-eggplant-lentils-herbs.webp'),
     mealType: 'dinner',
     prepTime: 15,
     cookTime: 35,

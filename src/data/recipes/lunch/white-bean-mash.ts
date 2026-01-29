@@ -4,7 +4,7 @@ export const whiteBeanMash: Recipe = {
     id: 'white-bean-mash',
     name: 'White Bean and Avocado Mash',
     description: 'Creamy high-protein mash grounded with white beans and topped with smoky mushrooms.',
-    image: require('../../../../assets/recipes/lunch/white-bean-mash.png'),
+    image: require('../../../../assets/recipes/lunch/white-bean-mash.webp'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 5,

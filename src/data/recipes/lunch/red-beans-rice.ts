@@ -4,7 +4,7 @@ export const redBeansRice: Recipe = {
     id: 'red-beans-rice',
     name: 'New Orleans Red Beans and Rice',
     description: 'Hearty, slow-simmered kidney beans with Cajun spices and red beans.',
-    image: require('../../../../assets/recipes/lunch/red-beans-rice.png'),
+    image: require('../../../../assets/recipes/lunch/red-beans-rice.webp'),
     mealType: 'lunch', // Can be dinner too
     prepTime: 20, // Plus overnight soak
     cookTime: 120, // 2 hours
