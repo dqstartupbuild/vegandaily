@@ -5,8 +5,6 @@ import { theme } from '../theme';
 import { Recipe } from '../types';
 import { formatAmount } from '../utils/formatAmount';
 import { ServingsAdjuster } from './ServingsAdjuster';
-import { RatingSection } from './RatingSection';
-import { CommentSection } from './CommentSection';
 
 interface RecipeDisplayProps {
   recipe: Recipe;
@@ -123,8 +121,9 @@ export const RecipeDisplay: React.FC<RecipeDisplayProps> = ({ recipe }) => {
           </View>
         </View>
       )}
+
       {/* Tags */}
-      {recipe.tags && recipe.tags.length > 0 && (
+      {recipe.tags.length > 0 && (
         <View style={styles.tagsContainer}>
           {recipe.tags.map((tag, index) => (
             <View key={index} style={styles.tag}>
@@ -133,15 +132,6 @@ export const RecipeDisplay: React.FC<RecipeDisplayProps> = ({ recipe }) => {
           ))}
         </View>
       )}
-
-      {/* Social Features */}
-      <View style={styles.section}>
-        <RatingSection recipeId={recipe.id} />
-      </View>
-
-      <View style={[styles.section, { borderBottomWidth: 0 }]}>
-        <CommentSection recipeId={recipe.id} />
-      </View>
 
       <View style={styles.bottomPadding} />
     </ScrollView>

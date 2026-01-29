@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 import { theme } from '../src/theme';
 import { BookmarkProvider } from '../src/context/BookmarkContext';
 import { DailyRecipeProvider } from '../src/context/DailyRecipeContext';
-import { AuthProvider } from '../src/context/AuthContext';
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -28,84 +27,75 @@ export default function RootLayout() {
     return (
         <SafeAreaProvider>
 
-            <AuthProvider>
-                <BookmarkProvider>
-                    <DailyRecipeProvider>
-                        <StatusBar style="light" />
-                        <Stack
-                            screenOptions={{
-                                headerStyle: {
-                                    backgroundColor: theme.colors.primary,
-                                },
-                                headerTintColor: theme.colors.textOnPrimary,
-                                headerTitleStyle: {
-                                    fontWeight: '600',
-                                },
-                                contentStyle: {
-                                    backgroundColor: theme.colors.background,
-                                },
+            <BookmarkProvider>
+                <DailyRecipeProvider>
+                    <StatusBar style="light" />
+                    <Stack
+                        screenOptions={{
+                            headerStyle: {
+                                backgroundColor: theme.colors.primary,
+                            },
+                            headerTintColor: theme.colors.textOnPrimary,
+                            headerTitleStyle: {
+                                fontWeight: '600',
+                            },
+                            contentStyle: {
+                                backgroundColor: theme.colors.background,
+                            },
+                        }}
+                    >
+                        <Stack.Screen
+                            name="(tabs)"
+                            options={{
+                                headerShown: false,
+                                headerBackTitle: 'Back',
                             }}
-                        >
-                            <Stack.Screen
-                                name="(tabs)"
-                                options={{
-                                    headerShown: false,
-                                    headerBackTitle: 'Back',
-                                }}
-                            />
-                            <Stack.Screen
-                                name="settings"
-                                options={{
-                                    title: 'Settings',
-                                    headerBackTitle: 'Back',
-                                }}
-                            />
-                            <Stack.Screen
-                                name="support"
-                                options={{
-                                    title: 'Support',
-                                    headerBackTitle: 'Back',
-                                }}
-                            />
-                            <Stack.Screen
-                                name="privacy"
-                                options={{
-                                    title: 'Privacy Policy',
-                                    headerBackTitle: 'Back',
-                                }}
-                            />
-                            <Stack.Screen
-                                name="terms"
-                                options={{
-                                    title: 'Terms of Service',
-                                    headerBackTitle: 'Back',
-                                }}
-                            />
-                            <Stack.Screen
-                                name="recipe/[mealType]"
-                                options={{
-                                    headerTitle: "Today's Recipe",
-                                    headerBackTitle: 'Back',
-                                }}
-                            />
-                            <Stack.Screen
-                                name="recipe/detail/[id]"
-                                options={{
-                                    headerTitle: 'Recipe',
-                                    headerBackTitle: 'Back',
-                                }}
-                            />
-                            <Stack.Screen
-                                name="auth/login"
-                                options={{
-                                    title: 'Sign In',
-                                    presentation: 'modal',
-                                }}
-                            />
-                        </Stack>
-                    </DailyRecipeProvider>
-                </BookmarkProvider>
-            </AuthProvider>
+                        />
+                        <Stack.Screen
+                            name="settings"
+                            options={{
+                                title: 'Settings',
+                                headerBackTitle: 'Back',
+                            }}
+                        />
+                        <Stack.Screen
+                            name="support"
+                            options={{
+                                title: 'Support',
+                                headerBackTitle: 'Back',
+                            }}
+                        />
+                        <Stack.Screen
+                            name="privacy"
+                            options={{
+                                title: 'Privacy Policy',
+                                headerBackTitle: 'Back',
+                            }}
+                        />
+                        <Stack.Screen
+                            name="terms"
+                            options={{
+                                title: 'Terms of Service',
+                                headerBackTitle: 'Back',
+                            }}
+                        />
+                        <Stack.Screen
+                            name="recipe/[mealType]"
+                            options={{
+                                headerTitle: "Today's Recipe",
+                                headerBackTitle: 'Back',
+                            }}
+                        />
+                        <Stack.Screen
+                            name="recipe/detail/[id]"
+                            options={{
+                                headerTitle: 'Recipe',
+                                headerBackTitle: 'Back',
+                            }}
+                        />
+                    </Stack>
+                </DailyRecipeProvider>
+            </BookmarkProvider>
         </SafeAreaProvider>
     );
 }
