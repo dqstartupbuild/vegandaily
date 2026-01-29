@@ -4,7 +4,7 @@ export const creamyCashewTomatoSoupGrilledVeggieSandwich: Recipe = {
     id: 'creamy-cashew-tomato-soup-grilled-veggie-sandwich',
     name: 'Creamy Cashew Tomato Soup + Grilled Veggie Sandwich',
     description: 'A cozy, savory bowl that\'s hearty, warming, and easy to make.',
-    image: require('../../../../assets/recipes/dinner/creamy-cashew-tomato-soup-grilled-veggie-sandwich.png'),
+    image: require('../../../../assets/recipes/dinner/cashew-tomato-soup-veggie-sandwich.png'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 20,
