@@ -4,7 +4,7 @@ export const garlicLemonBroccoliChickpeaPasta: Recipe = {
     id: 'garlic-lemon-broccoli-chickpea-pasta',
     name: 'Garlic Lemon Broccoli + Chickpea Pasta',
     description: 'A comforting pasta dish with bold, plant-forward flavors and a silky sauce.',
-    image: null,
+    image: require('../../../../assets/recipes/dinner/garlic-lemon-broccoli-chickpea-pasta.png'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 15,

@@ -4,7 +4,7 @@ export const creamyPotatoCornChowderNoDairy: Recipe = {
     id: 'creamy-potato-corn-chowder-no-dairy',
     name: 'Creamy Potato Corn Chowder (No Dairy)',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/dinner/creamy-potato-corn-chowder-no-dairy.png'),
     mealType: 'dinner',
     prepTime: 12,
     cookTime: 25,

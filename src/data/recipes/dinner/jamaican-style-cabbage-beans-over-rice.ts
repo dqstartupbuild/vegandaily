@@ -4,7 +4,7 @@ export const jamaicanStyleCabbageBeansOverRice: Recipe = {
     id: 'jamaican-style-cabbage-beans-over-rice',
     name: 'Jamaican-Style Cabbage + Beans (Over Rice)',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/dinner/jamaican-style-cabbage-beans-over-rice.png'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 18,
