@@ -4,7 +4,7 @@ export const lemonGarlicPastaWithCannelliniAsparagus: Recipe = {
     id: 'lemon-garlic-pasta-with-cannellini-asparagus',
     name: 'Lemon Garlic Pasta with Cannellini + Asparagus',
     description: 'A comforting pasta dish with bold, plant-forward flavors and a silky sauce.',
-    image: null,
+    image: require('../../../../assets/recipes/dinner/lemon-garlic-pasta-cannellini-asparagus.png'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 15,

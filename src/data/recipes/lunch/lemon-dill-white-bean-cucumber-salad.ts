@@ -4,7 +4,7 @@ export const lemonDillWhiteBeanCucumberSalad: Recipe = {
     id: 'lemon-dill-white-bean-cucumber-salad',
     name: 'Lemon Dill White Bean Cucumber Salad',
     description: 'A fresh, colorful salad with bright flavors and a satisfying crunch.',
-    image: null,
+    image: require('../../../../assets/recipes/lunch/lemon-dill-white-bean-cucumber-salad.png'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 0,

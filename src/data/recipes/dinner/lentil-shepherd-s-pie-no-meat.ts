@@ -4,7 +4,7 @@ export const lentilShepherdSPieNoMeat: Recipe = {
     id: 'lentil-shepherd-s-pie-no-meat',
     name: 'Lentil Shepherd\'s Pie (No Meat)',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/dinner/lentil-shepherds-pie.png'),
     mealType: 'dinner',
     prepTime: 15,
     cookTime: 35,

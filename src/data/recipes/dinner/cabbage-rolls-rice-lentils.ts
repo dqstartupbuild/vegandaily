@@ -4,7 +4,7 @@ export const cabbageRollsRiceLentils: Recipe = {
     id: 'cabbage-rolls-rice-lentils',
     name: 'Cabbage Rolls (Rice + Lentils)',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/dinner/cabbage-rolls.png'),
     mealType: 'dinner',
     prepTime: 20,
     cookTime: 35,

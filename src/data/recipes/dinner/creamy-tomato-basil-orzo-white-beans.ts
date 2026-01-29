@@ -4,7 +4,7 @@ export const creamyTomatoBasilOrzoWhiteBeans: Recipe = {
     id: 'creamy-tomato-basil-orzo-white-beans',
     name: 'Creamy Tomato Basil Orzo + White Beans',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/dinner/creamy-white-bean-tomato-orzo.png'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 18,

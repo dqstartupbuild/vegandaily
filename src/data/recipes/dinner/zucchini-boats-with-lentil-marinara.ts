@@ -4,7 +4,7 @@ export const zucchiniBoatsWithLentilMarinara: Recipe = {
     id: 'zucchini-boats-with-lentil-marinara',
     name: 'Zucchini Boats with Lentil Marinara',
     description: 'A flavorful, plant-based dinner recipe that\'s simple and satisfying.',
-    image: null,
+    image: require('../../../../assets/recipes/dinner/zucchini-boats-with-lentil-marinara.png'),
     mealType: 'dinner',
     prepTime: 15,
     cookTime: 25,

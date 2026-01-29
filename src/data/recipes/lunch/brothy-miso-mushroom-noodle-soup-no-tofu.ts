@@ -4,7 +4,7 @@ export const brothyMisoMushroomNoodleSoupNoTofu: Recipe = {
     id: 'brothy-miso-mushroom-noodle-soup-no-tofu',
     name: 'Brothy Miso Mushroom Noodle Soup (No Tofu)',
     description: 'A cozy, savory bowl that\'s hearty, warming, and easy to make.',
-    image: null,
+    image: require('../../../../assets/recipes/lunch/brothy-miso-mushroom-noodle-soup.png'),
     mealType: 'lunch',
     prepTime: 8,
     cookTime: 12,

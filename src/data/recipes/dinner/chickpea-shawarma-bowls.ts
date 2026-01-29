@@ -4,7 +4,7 @@ export const chickpeaShawarmaBowls: Recipe = {
     id: 'chickpea-shawarma-bowls',
     name: 'Chickpea Shawarma Bowls',
     description: 'A balanced bowl layered with vibrant veggies and hearty plant proteins.',
-    image: null,
+    image: require('../../../../assets/recipes/dinner/chickpea-shawarma-bowl.png'),
     mealType: 'dinner',
     prepTime: 10,
     cookTime: 20,
