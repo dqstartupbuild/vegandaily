@@ -31,7 +31,7 @@ To build the production `.ipa` and `.aab` files, you need to initialize EAS (Exp
 
 ### 2. Legal Public Links
 - **Privacy Policy URL**: Apple requires a public URL (e.g., your-website.com/privacy). Hosting the web version of the app satisfies this.
-- **Support URL**: A contact point for users (mandated by Apple).
+- **Support URL**: A contact point for users (mandated by Apple). ✅ Created at `/support` linking to X (@dqstartupbuild) and email (support@followusai.com).
 
 ---
 
@@ -64,10 +64,10 @@ Add a settings icon to the Dashboard to display:
 - [ ] Create `eas.json` for production builds.
 - [x] Compress `assets/recipes/` images.
 - [x] Optimize branding assets and splash screen logic.
-- [ ] Host internal Privacy/Terms on a public URL.
+- [x] Host internal Privacy/Terms/Support on a public URL. (e.g., vegandaily.app/support)
 - [ ] Run `npx expo run:ios --configuration Release` to verify production stability.
 - [ ] Generate screenshots for the App Store (6.5" and 5.5" for iOS).
 
 ---
 
-*Last Updated: 2026-01-28*
+*Last Updated: 2026-01-29*

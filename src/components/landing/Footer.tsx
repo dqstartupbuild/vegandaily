@@ -36,6 +36,9 @@ export const Footer = () => {
 
                     <View style={styles.linkGroup}>
                         <Text style={styles.groupTitle}>Legal</Text>
+                        <Link href="/support" asChild>
+                            <Pressable style={styles.link}><Text style={styles.linkText}>Support</Text></Pressable>
+                        </Link>
                         <Link href="/privacy" asChild>
                             <Pressable style={styles.link}><Text style={styles.linkText}>Privacy Policy</Text></Pressable>
                         </Link>
