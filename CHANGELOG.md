@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Links to X (@dqstartupbuild) and email (support@followusai.com).
   - Includes Frequently Asked Questions (FAQ) for quick user assistance.
 - **Header Navigation**: Integrated a settings icon (cog) in the global Header for easy access to the Settings screen.
+- **Custom 404 Page**: Added a themed `+not-found.tsx` page to handle broken links gracefully with a custom "withered plant" aesthetic.
+- **SEO & Web**:
+  - Created a static `public/sitemap.xml` for better search engine discovery.
+  - Added `public/robots.txt` to guide search crawlers.
 
 ### Changed
 - **Footer Updates**: Added a "Support" link to the web landing page footer in the legal section.

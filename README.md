@@ -109,6 +109,7 @@ vegandaily/
 │   │   └── detail
 │   │       └── [id].tsx
 │   ├── _layout.tsx
+│   ├── +not-found.tsx
 │   ├── index.tsx (Mobile redirect)
 │   ├── index.web.tsx (Web landing page)
 │   ├── privacy.tsx
@@ -247,6 +248,9 @@ vegandaily/
 │   └── splash-icon.png
 ├── docs
 │   └── possible-features.md
+├── public
+│   ├── robots.txt
+│   └── sitemap.xml
 ├── package-lock.json
 ├── package.json
 ├── src
