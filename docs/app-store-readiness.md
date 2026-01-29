@@ -29,7 +29,7 @@ The application is functionally complete and follows the core philosophy of a si
 To build the production `.ipa` and `.aab` files, you need to initialize EAS (Expo Application Services).
 - Run `eas build:configure` or create a manual `eas.json`.
 
-### 2. Legal Public Links
+### 2. Legal Public Links ✅ - COMPLETED
 - **Privacy Policy URL**: Apple requires a public URL (e.g., your-website.com/privacy). Hosting the web version of the app satisfies this.
 - **Support URL**: A contact point for users (mandated by Apple). ✅ Created at `/support` linking to X (@dqstartupbuild) and email (support@followusai.com).
 
@@ -61,7 +61,7 @@ Added a settings icon to the Header to display:
 ## 🚀 Pre-Submission Checklist
 
 - [x] Update `app.json` with `bundleIdentifier` and `package`.
-- [ ] Create `eas.json` for production builds.
+- [x] Create `eas.json` for production builds.
 - [x] Compress `assets/recipes/` images.
 - [x] Optimize branding assets and splash screen logic.
 - [x] Host internal Privacy/Terms/Support on a public URL. (e.g., vegandaily.app/support)
