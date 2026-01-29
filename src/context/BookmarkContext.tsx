@@ -1,8 +1,8 @@
-// Bookmark Context for managing bookmarked recipes across the app
-// Provides a centralized state for bookmark operations
-
 import React, { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
 import { getBookmarks, addBookmark, removeBookmark } from '../utils/bookmarkStorage';
+import { useAuth } from './AuthContext';
+import { getDBBookmarks, addDBBookmark, removeDBBookmark, syncBookmarksToDB } from '../services/bookmarkService';
+import { Platform } from 'react-native';
 
 interface BookmarkContextType {
     bookmarks: string[];
@@ -18,31 +18,50 @@ interface BookmarkProviderProps {
     children: ReactNode;
 }
 
-/**
- * Provider component that manages bookmark state
- */
 export const BookmarkProvider: React.FC<BookmarkProviderProps> = ({ children }) => {
     const [bookmarks, setBookmarks] = useState<string[]>([]);
     const [isLoading, setIsLoading] = useState(true);
+    const { user } = useAuth();
 
-    // Load bookmarks from storage on mount
+    // Sync logic when user logs in
+    useEffect(() => {
+        const syncOnLogin = async () => {
+            if (user && Platform.OS !== 'web') {
+                const localBookmarks = await getBookmarks();
+                if (localBookmarks.length > 0) {
+                    await syncBookmarksToDB(user.id, localBookmarks);
+                    // Optionally clear local storage after sync
+                    // await clearLocalBookmarks(); 
+                }
+            }
+            refreshBookmarks();
+        };
+        syncOnLogin();
+    }, [user]);
+
     const refreshBookmarks = useCallback(async () => {
         setIsLoading(true);
         try {
-            const stored = await getBookmarks();
-            setBookmarks(stored);
+            if (user) {
+                const dbBookmarks = await getDBBookmarks(user.id);
+                setBookmarks(dbBookmarks);
+            } else if (Platform.OS !== 'web') {
+                const stored = await getBookmarks();
+                setBookmarks(stored);
+            } else {
+                setBookmarks([]);
+            }
         } catch (error) {
             console.error('Error loading bookmarks:', error);
         } finally {
             setIsLoading(false);
         }
-    }, []);
+    }, [user]);
 
     useEffect(() => {
         refreshBookmarks();
     }, [refreshBookmarks]);
 
-    // Check if a recipe is bookmarked (synchronous for UI)
     const isBookmarkedFn = useCallback(
         (recipeId: string): boolean => {
             return bookmarks.includes(recipeId);
@@ -50,30 +69,38 @@ export const BookmarkProvider: React.FC<BookmarkProviderProps> = ({ children }) 
         [bookmarks]
     );
 
-    // Toggle bookmark status
     const toggleBookmarkFn = useCallback(
         async (recipeId: string): Promise<void> => {
+            // Web requirement check
+            if (Platform.OS === 'web' && !user) {
+                // Should ideally trigger login modal, but for now we alert
+                alert('Please sign in to bookmark recipes');
+                return;
+            }
+
             const currentlyBookmarked = bookmarks.includes(recipeId);
 
             if (currentlyBookmarked) {
-                // Optimistic update - remove
                 setBookmarks((prev) => prev.filter((id) => id !== recipeId));
-                const success = await removeBookmark(recipeId);
-                if (!success) {
-                    // Revert on failure
-                    setBookmarks((prev) => [...prev, recipeId]);
+                let success = false;
+                if (user) {
+                    success = await removeDBBookmark(user.id, recipeId);
+                } else {
+                    success = await removeBookmark(recipeId);
                 }
+                if (!success) setBookmarks((prev) => [...prev, recipeId]);
             } else {
-                // Optimistic update - add
                 setBookmarks((prev) => [...prev, recipeId]);
-                const success = await addBookmark(recipeId);
-                if (!success) {
-                    // Revert on failure
-                    setBookmarks((prev) => prev.filter((id) => id !== recipeId));
+                let success = false;
+                if (user) {
+                    success = await addDBBookmark(user.id, recipeId);
+                } else {
+                    success = await addBookmark(recipeId);
                 }
+                if (!success) setBookmarks((prev) => prev.filter((id) => id !== recipeId));
             }
         },
-        [bookmarks]
+        [bookmarks, user]
     );
 
     const value: BookmarkContextType = {
@@ -87,9 +114,6 @@ export const BookmarkProvider: React.FC<BookmarkProviderProps> = ({ children }) 
     return <BookmarkContext.Provider value={value}>{children}</BookmarkContext.Provider>;
 };
 
-/**
- * Hook to access bookmark context
- */
 export const useBookmarks = (): BookmarkContextType => {
     const context = useContext(BookmarkContext);
     if (!context) {
