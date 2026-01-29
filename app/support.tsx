@@ -1,4 +1,5 @@
 import React from 'react';
+import { Metadata } from '../src/components/Metadata';
 import { ScrollView, View, Text, StyleSheet, Platform, Pressable } from 'react-native';
 import { Stack } from 'expo-router';
 import * as Linking from 'expo-linking';
@@ -20,6 +21,11 @@ export default function SupportPage() {
 
     return (
         <View style={styles.container}>
+            <Metadata 
+                title="Support"
+                description="Get help with Vegan Daily. Frequently asked questions and contact information for support."
+                canonicalPath="/support"
+            />
             <Stack.Screen options={{ title: 'Support', headerShown: true, headerBackTitle: 'Back' }} />
             <ScrollView contentContainerStyle={styles.content}>
                 <Text style={styles.title}>Support</Text>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Metadata } from '../src/components/Metadata';
 import { View, Text, StyleSheet, ScrollView, Pressable, Platform } from 'react-native';
 import { Stack, useRouter } from 'expo-router';
 import { theme } from '../src/theme';
@@ -33,6 +34,12 @@ export default function SettingsScreen() {
 
     return (
         <View style={styles.container}>
+            <Metadata 
+                title="Settings"
+                description="Manage your preferences and learn more about Vegan Daily."
+                canonicalPath="/settings"
+                noIndex={true}
+            />
             <Stack.Screen 
                 options={{ 
                     title: 'Settings', 

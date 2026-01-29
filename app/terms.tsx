@@ -1,4 +1,5 @@
 import React from 'react';
+import { Metadata } from '../src/components/Metadata';
 import { ScrollView, View, Text, StyleSheet, Platform } from 'react-native';
 import { Stack } from 'expo-router';
 import { theme } from '../src/theme';
@@ -10,6 +11,11 @@ import { theme } from '../src/theme';
 export default function TermsPage() {
     return (
         <View style={styles.container}>
+            <Metadata 
+                title="Terms of Service"
+                description="The terms and conditions for using Vegan Daily. Please read our guidelines for a healthy app experience."
+                canonicalPath="/terms"
+            />
             <Stack.Screen options={{ title: 'Terms of Service', headerShown: true, headerBackTitle: 'Back' }} />
             <ScrollView contentContainerStyle={styles.content}>
                 <Text style={styles.title}>Terms of Service</Text>

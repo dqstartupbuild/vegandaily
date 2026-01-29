@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useCallback } from 'react';
+import { Metadata } from '../../src/components/Metadata';
 import { View, FlatList, StyleSheet, Text } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -58,6 +59,11 @@ export default function BrowseScreen() {
 
     return (
         <View style={styles.container}>
+            <Metadata 
+                title="Browse All Recipes"
+                description="Explore our full collection of easy vegan recipes. Search by ingredients or filter by meal type."
+                canonicalPath="/browse"
+            />
             {/* Header */}
             <View style={[styles.header, { paddingTop: insets.top + theme.spacing.md }]}>
                 <Text style={styles.headerTitle}>Browse Recipes</Text>

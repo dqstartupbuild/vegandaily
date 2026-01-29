@@ -7,6 +7,8 @@ import { Hero } from '../src/components/landing/Hero';
 import { Features } from '../src/components/landing/Features';
 import { Footer } from '../src/components/landing/Footer';
 
+import { Metadata } from '../src/components/Metadata';
+
 /**
  * Web-only Landing Page
  * Overrides the root index for web platform to provide a marketing introduction
@@ -19,6 +21,11 @@ export default function WebLandingPage() {
 
     return (
         <View style={styles.container}>
+            <Metadata 
+                title="Vegan Daily - Discover Easy Daily Vegan Recipes"
+                description="The #1 app for simple, delicious, and healthy plant-based meals every day. No accounts, no clutter, just great vegan food."
+                canonicalPath="/"
+            />
             <Stack.Screen 
                 options={{ 
                     title: 'Vegan Daily | Simple Vegan Recipes',

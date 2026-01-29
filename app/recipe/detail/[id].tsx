@@ -1,4 +1,5 @@
 import { View, StyleSheet } from 'react-native';
+import { Metadata } from '../../../src/components/Metadata';
 import { useLocalSearchParams, Stack } from 'expo-router';
 import { RecipeDisplay } from '../../../src/components/RecipeDisplay';
 import { BookmarkButton } from '../../../src/components/BookmarkButton';
@@ -27,6 +28,12 @@ export default function RecipeDetailScreen() {
 
     return (
         <View style={styles.container}>
+            <Metadata 
+                title={recipe.name}
+                description={recipe.description}
+                canonicalPath={`/recipe/detail/${recipe.id}`}
+                ogImage={recipe.image ? (typeof recipe.image === 'string' ? recipe.image : undefined) : undefined}
+            />
             <Stack.Screen
                 options={{
                     headerTitle: recipe.name,

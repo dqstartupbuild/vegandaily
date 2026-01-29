@@ -4,6 +4,7 @@ import { Header } from '../../src/components/Header';
 import { MealButton } from '../../src/components/MealButton';
 import { theme } from '../../src/theme';
 import { MealType } from '../../src/types';
+import { Metadata } from '../../src/components/Metadata';
 
 /**
  * Home screen with meal selection buttons
@@ -17,6 +18,11 @@ export default function HomeScreen() {
 
     return (
         <View style={styles.container}>
+            <Metadata 
+                title="Daily Meal Suggestions"
+                description="Get your daily dose of breakfast, lunch, and dinner vegan recipe ideas."
+                canonicalPath="/home"
+            />
             <Header showDate={true} />
 
             <ScrollView

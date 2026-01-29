@@ -1,4 +1,5 @@
 import { Link, Stack } from 'expo-router';
+import { Metadata } from '../src/components/Metadata';
 import { StyleSheet, Text, View, Platform, Pressable } from 'react-native';
 import { theme } from '../src/theme';
 import { Ionicons } from '@expo/vector-icons';
@@ -10,6 +11,11 @@ import { Ionicons } from '@expo/vector-icons';
 export default function NotFoundScreen() {
   return (
     <>
+      <Metadata 
+        title="Page Not Found"
+        description="Sorry, the page you're looking for doesn't exist. Return to Vegan Daily for fresh vegan recipe ideas."
+        noIndex={true}
+      />
       <Stack.Screen options={{ title: 'Oops!', headerShown: false }} />
       <View style={styles.container}>
         <View style={styles.content}>

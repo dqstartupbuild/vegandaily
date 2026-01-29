@@ -1,4 +1,5 @@
 import React from 'react';
+import { Metadata } from '../src/components/Metadata';
 import { ScrollView, View, Text, StyleSheet, Platform } from 'react-native';
 import { Stack } from 'expo-router';
 import { theme } from '../src/theme';
@@ -10,6 +11,11 @@ import { theme } from '../src/theme';
 export default function PrivacyPage() {
     return (
         <View style={styles.container}>
+            <Metadata 
+                title="Privacy Policy"
+                description="Our privacy-first commitment. Learn how we protect your data and why we don't collect personal information."
+                canonicalPath="/privacy"
+            />
             <Stack.Screen options={{ title: 'Privacy Policy', headerShown: true, headerBackTitle: 'Back' }} />
             <ScrollView contentContainerStyle={styles.content}>
                 <Text style={styles.title}>Privacy Policy</Text>

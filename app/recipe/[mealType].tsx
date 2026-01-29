@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Metadata } from '../../src/components/Metadata';
 import { View, StyleSheet, ActivityIndicator, Text } from 'react-native';
 import { useLocalSearchParams, Stack, useRouter } from 'expo-router';
 import { RecipeDisplay } from '../../src/components/RecipeDisplay';
@@ -63,6 +64,12 @@ export default function RecipeScreen() {
 
     return (
         <View style={styles.container}>
+            <Metadata 
+                title={headerTitle}
+                description={`Check out today's featured ${mealLabels[validMealType].toLowerCase()} vegan recipe: ${recipe.name}.`}
+                canonicalPath={`/recipe/${validMealType}`}
+                ogImage={recipe.image ? (typeof recipe.image === 'string' ? recipe.image : undefined) : undefined}
+            />
             <Stack.Screen
                 options={{
                     headerTitle,

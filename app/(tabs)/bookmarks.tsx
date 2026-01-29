@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { Metadata } from '../../src/components/Metadata';
 import { View, FlatList, StyleSheet, Text } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -52,6 +53,11 @@ export default function BookmarksScreen() {
 
     return (
         <View style={styles.container}>
+            <Metadata 
+                title="My Bookmarked Recipes"
+                description="Easily access all your favorite saved vegan recipes in one place. Your personalized plant-based cookbook."
+                canonicalPath="/bookmarks"
+            />
             {/* Header */}
             <View style={[styles.header, { paddingTop: insets.top + theme.spacing.md }]}>
                 <Text style={styles.headerTitle}>My Bookmarks</Text>
