@@ -1,7 +1,5 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Ionicons } from '@expo/vector-icons';
 import { theme } from '../theme';
 import { getFormattedDate } from '../utils/dateUtils';
 
@@ -19,7 +17,10 @@ export const Header: React.FC<HeaderProps> = ({ showDate = true }) => {
     <View style={[styles.container, { paddingTop: insets.top + theme.spacing.md }]}>
       <View style={styles.content}>
         <View style={styles.titleContainer}>
-          <Ionicons name="leaf" size={28} color={theme.colors.textOnPrimary} />
+          <Image 
+            source={require('../../assets/icon.png')} 
+            style={styles.logoIcon} 
+          />
           <Text style={styles.title}>Vegan Daily</Text>
         </View>
         {showDate && (
@@ -44,6 +45,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: theme.spacing.sm,
     marginBottom: theme.spacing.xs,
+  },
+  logoIcon: {
+    width: 28,
+    height: 28,
+    borderRadius: 6,
   },
   title: {
     fontSize: theme.typography.sizes.xxl,

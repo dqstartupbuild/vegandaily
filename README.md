@@ -101,12 +101,16 @@ vegandaily/
 │   │   ├── _layout.tsx
 │   │   ├── bookmarks.tsx
 │   │   ├── browse.tsx
-│   │   └── index.tsx
+│   │   └── home.tsx
+│   ├── recipe
+│   │   ├── [mealType].tsx
+│   │   └── detail
+│   │       └── [id].tsx
 │   ├── _layout.tsx
-│   └── recipe
-│       ├── [mealType].tsx
-│       └── detail
-│           └── [id].tsx
+│   ├── index.tsx (Mobile redirect)
+│   ├── index.web.tsx (Web landing page)
+│   ├── privacy.tsx
+│   └── terms.tsx
 ├── app.json
 ├── assets
 │   ├── adaptive-icon.png
@@ -545,12 +549,6 @@ npm install
 
 # Start the development server
 npm start
-```
-
-### Running on Device
-
-1. Install **Expo Go** from App Store or Play Store
-2. Run `npm start` in the project directory
 3. Scan the QR code with Expo Go (Android) or Camera (iOS)
 
 ---

@@ -13,12 +13,16 @@ vegandaily/
 │   │   ├── _layout.tsx
 │   │   ├── bookmarks.tsx
 │   │   ├── browse.tsx
-│   │   └── index.tsx
+│   │   └── home.tsx
+│   ├── recipe
+│   │   ├── [mealType].tsx
+│   │   └── detail
+│   │       └── [id].tsx
 │   ├── _layout.tsx
-│   └── recipe
-│       ├── [mealType].tsx
-│       └── detail
-│           └── [id].tsx
+│   ├── index.tsx
+│   ├── index.web.tsx
+│   ├── privacy.tsx
+│   └── terms.tsx
 ├── app.json
 ├── assets
 │   ├── adaptive-icon.png
