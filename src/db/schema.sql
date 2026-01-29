@@ -16,3 +16,11 @@ CREATE TABLE IF NOT EXISTS bookmarks (
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   UNIQUE(user_id, recipe_id)
 );
+
+-- Profiles table (as mentioned in memory)
+CREATE TABLE IF NOT EXISTS profiles (
+  id UUID PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+  gemini_api_key_encrypted TEXT,
+  settings JSONB DEFAULT '{}'::jsonb,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
