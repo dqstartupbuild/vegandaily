@@ -4,7 +4,7 @@ export const creamyWhiteBeanBroccoliBakedPotatoBowl: Recipe = {
     id: 'creamy-white-bean-broccoli-baked-potato-bowl',
     name: 'Creamy White Bean Broccoli "Baked Potato" Bowl',
     description: 'A balanced bowl layered with vibrant veggies and hearty plant proteins.',
-    image: null,
+    image: require('../../../../assets/recipes/lunch/creamy-white-bean-broccoli-baked-potato-bowl.png'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 15,

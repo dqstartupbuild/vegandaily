@@ -4,7 +4,7 @@ export const creamyAvocadoPeaPastaGreenSauce: Recipe = {
     id: 'creamy-avocado-pea-pasta-green-sauce',
     name: 'Creamy Avocado Pea Pasta (Green Sauce)',
     description: 'A comforting pasta dish with bold, plant-forward flavors and a silky sauce.',
-    image: null,
+    image: require('../../../../assets/recipes/lunch/creamy-avocado-pea-pasta-green-sauce.png'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 12,

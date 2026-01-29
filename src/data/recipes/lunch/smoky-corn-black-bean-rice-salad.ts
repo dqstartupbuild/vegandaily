@@ -4,7 +4,7 @@ export const smokyCornBlackBeanRiceSalad: Recipe = {
     id: 'smoky-corn-black-bean-rice-salad',
     name: 'Smoky Corn + Black Bean Rice Salad',
     description: 'A fresh, colorful salad with bright flavors and a satisfying crunch.',
-    image: null,
+    image: require('../../../../assets/recipes/lunch/smoky-corn-black-bean-rice-salad.png'),
     mealType: 'lunch',
     prepTime: 10,
     cookTime: 0,
