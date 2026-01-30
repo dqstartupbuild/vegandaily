@@ -68,7 +68,7 @@ Added a settings icon to the Header to display:
 - [x] Implement "About/Settings" screen with legal links.
 - [x] Run `npx expo run:ios --configuration Release` to verify production stability.
 - [x] Integrate `expo-constants` for versioning.
-- [ ] Generate screenshots for the App Store (6.5" and 5.5" for iOS).
+- [x] Generate screenshots for the App Store (6.5" and 5.5" for iOS).
 
 ---
 
