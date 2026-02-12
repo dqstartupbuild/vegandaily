@@ -3,9 +3,11 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
+import { Platform } from 'react-native';
 import { theme } from '../src/theme';
 import { BookmarkProvider } from '../src/context/BookmarkContext';
 import { DailyRecipeProvider } from '../src/context/DailyRecipeContext';
+import { Analytics } from '@vercel/analytics/react';
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -30,6 +32,7 @@ export default function RootLayout() {
             <BookmarkProvider>
                 <DailyRecipeProvider>
                     <StatusBar style="light" />
+                    {Platform.OS === 'web' && <Analytics />}
                     <Stack
                         screenOptions={{
                             headerStyle: {
