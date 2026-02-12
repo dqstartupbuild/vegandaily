@@ -1,6 +1,8 @@
-import { View, Text, StyleSheet, Pressable, Platform, Image } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Platform, Image, Linking } from 'react-native';
 import { Link } from 'expo-router';
 import { theme } from '../../theme';
+
+const APP_STORE_URL = 'https://apps.apple.com/us/app/vegan-daily-easy-plant-based/id6758465465';
 
 export const Navbar = () => {
     return (
@@ -22,11 +24,9 @@ export const Navbar = () => {
                             <Text style={styles.navButtonText}>Explore Recipes</Text>
                         </Pressable>
                     </Link>
-                    <Link href="/home" asChild>
-                        <Pressable style={styles.ctaButton}>
-                            <Text style={styles.ctaButtonText}>Open App</Text>
-                        </Pressable>
-                    </Link>
+                    <Pressable style={styles.ctaButton} onPress={() => Linking.openURL(APP_STORE_URL)}>
+                        <Text style={styles.ctaButtonText}>Download iOS App</Text>
+                    </Pressable>
                 </View>
             </View>
         </View>

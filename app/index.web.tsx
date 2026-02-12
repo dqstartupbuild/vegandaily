@@ -22,13 +22,15 @@ export default function WebLandingPage() {
     return (
         <View style={styles.container}>
             <Metadata 
-                title="Vegan Daily - Discover Easy Daily Vegan Recipes"
-                description="The #1 app for simple, delicious, and healthy plant-based meals every day. No accounts, no clutter, just great vegan food."
+                title="Vegan Daily: Easy Plant-Based | Now on iOS"
+                description="Vegan Daily: Easy Plant-Based is now available on the App Store. Get simple vegan breakfast, lunch, and dinner ideas every day."
                 canonicalPath="/"
+                iosAppId="6758465465"
+                iosAppArgument="https://apps.apple.com/us/app/vegan-daily-easy-plant-based/id6758465465"
             />
             <Stack.Screen 
                 options={{ 
-                    title: 'Vegan Daily | Simple Vegan Recipes',
+                    title: 'Vegan Daily: Easy Plant-Based',
                     headerShown: false 
                 }} 
             />

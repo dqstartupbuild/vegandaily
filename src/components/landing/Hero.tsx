@@ -1,8 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet, Pressable, Image } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Image, Linking } from 'react-native';
 import { Link } from 'expo-router';
 import { theme } from '../../theme';
 import { Ionicons } from '@expo/vector-icons';
+
+const APP_STORE_URL = 'https://apps.apple.com/us/app/vegan-daily-easy-plant-based/id6758465465';
 
 export const Hero = () => {
     return (
@@ -21,16 +23,19 @@ export const Hero = () => {
                     </Text>
                     
                     <View style={styles.actions}>
+                        <Pressable style={styles.primaryAction} onPress={() => Linking.openURL(APP_STORE_URL)}>
+                            <Ionicons name="logo-apple" size={20} color={theme.colors.textOnPrimary} style={{ marginRight: 8 }} />
+                            <Text style={styles.primaryActionText}>Download on the App Store</Text>
+                        </Pressable>
                         <Link href="/home" asChild>
                             <Pressable style={styles.primaryAction}>
-                                <Text style={styles.primaryActionText}>Start Cooking Now</Text>
+                                <Text style={styles.primaryActionText}>Preview on Web</Text>
                                 <Ionicons name="arrow-forward" size={18} color={theme.colors.textOnPrimary} style={{ marginLeft: 8 }} />
                             </Pressable>
                         </Link>
                         <View style={styles.appLinks}>
                             <Ionicons name="logo-apple" size={24} color={theme.colors.textLight} style={styles.appIcon} />
-                            <Ionicons name="logo-google-playstore" size={22} color={theme.colors.textLight} style={styles.appIcon} />
-                            <Text style={styles.appLinksText}>Coming soon to stores</Text>
+                            <Text style={styles.appLinksText}>Now on iOS: Vegan Daily: Easy Plant-Based</Text>
                         </View>
                     </View>
                 </View>
@@ -126,6 +131,7 @@ const styles = StyleSheet.create({
         borderRadius: 14,
         alignSelf: 'flex-start',
         ...theme.shadows.md,
+        marginBottom: theme.spacing.md,
     },
     primaryActionText: {
         color: theme.colors.textOnPrimary,

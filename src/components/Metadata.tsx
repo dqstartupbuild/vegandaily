@@ -7,6 +7,8 @@ interface MetadataProps {
   canonicalPath?: string;
   ogImage?: string;
   noIndex?: boolean;
+  iosAppId?: string;
+  iosAppArgument?: string;
 }
 
 const DEFAULT_TITLE = 'Vegan Daily - Easy Daily Vegan Recipes';
@@ -20,6 +22,8 @@ export const Metadata: React.FC<MetadataProps> = ({
   canonicalPath = '',
   ogImage = DEFAULT_OG_IMAGE,
   noIndex = false,
+  iosAppId,
+  iosAppArgument,
 }) => {
   const fullTitle = title === DEFAULT_TITLE ? title : `${title} | Vegan Daily`;
   const canonicalUrl = `${BASE_URL}${canonicalPath}`;
@@ -46,6 +50,18 @@ export const Metadata: React.FC<MetadataProps> = ({
 
       {/* Robots */}
       {noIndex && <meta name="robots" content="noindex, nofollow" />}
+
+      {/* iOS Smart App Banner */}
+      {iosAppId && (
+        <meta
+          name="apple-itunes-app"
+          content={
+            iosAppArgument
+              ? `app-id=${iosAppId}, app-argument=${iosAppArgument}`
+              : `app-id=${iosAppId}`
+          }
+        />
+      )}
 
       {/* Favicon - The user mentioned placing favicon.ico in public */}
       <link rel="icon" href="/favicon.ico" />
